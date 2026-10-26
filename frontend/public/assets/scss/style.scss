@@ -1,0 +1,1483 @@
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Global
+    ## Global
+    ## Mixins
+    ## Theme
+    ## Variables
+    ## Common
+
+# Sections
+    ## Nav Bar
+    ## Banner
+    ## Brand Area
+    ## Footer
+    ## Widgets
+
+# Elements
+    ## accordion
+    ## filter
+    ## apartment
+    ## blog
+    ## city
+    ## feature
+    ## gallery
+    ## intro
+    ## main-search
+    ## pricing
+    ## service
+    ## team
+    ## user-list
+
+--------------------------------------------------------------*/
+
+//== Global Design
+@import "global/_mixins";
+@import "global/_variables";
+@import "global/_global";
+@import "global/_common";
+@import "global/_animate";
+
+//== Pages
+//== Sections
+@import "sections/_section-title";
+@import "sections/_navbar";
+@import "sections/_search";
+@import "sections/_banner";
+@import "sections/_content";
+@import "sections/_service";
+@import "sections/_widgets";
+@import "sections/_blog";
+@import "sections/_sectionbg";
+@import "sections/_footer";
+@import "sections/_responsive";
+@import "sections/_featurearea";
+
+
+
+
+
+
+
+
+/* =======================================
+   VECTOR ENGINEERS - INDUSTRIES SECTION
+   Premium Corporate Design
+======================================= */
+
+.ve-industries {
+  --ind-blue: #0879c4;
+  --ind-navy: #102f50;
+  --ind-text: #25374a;
+  --ind-muted: #687787;
+
+  position: relative;
+  padding: 95px 0 85px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.ve-industries *,
+.ve-industries *::before,
+.ve-industries *::after {
+  box-sizing: border-box;
+}
+
+/* SECTION HEADER */
+
+.ve-ind-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 45px;
+  margin-bottom: 40px;
+}
+
+.ve-ind-heading {
+  flex: 1.2;
+}
+
+.ve-ind-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 19px;
+  color: var(--ind-blue);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.ve-ind-line {
+  display: inline-block;
+  width: 31px;
+  height: 2px;
+  background: var(--ind-blue);
+}
+
+.ve-ind-heading h2 {
+  margin: 0;
+  color: var(--ind-navy);
+  font-size: clamp(32px, 3vw, 46px);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -1.2px;
+}
+
+.ve-ind-heading h2 span {
+  color: var(--ind-blue);
+}
+
+.ve-ind-header-right {
+  flex: 0.8;
+  max-width: 420px;
+  padding-bottom: 5px;
+}
+
+.ve-ind-header-right p {
+  margin: 0 0 20px;
+  color: var(--ind-muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.ve-ind-view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--ind-blue);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.ve-ind-view-all:hover {
+  gap: 17px;
+  color: var(--ind-navy);
+}
+
+/* =======================================
+   GRID LAYOUT
+======================================= */
+
+.ve-ind-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* CARD */
+
+.ve-ind-card {
+  position: relative;
+  display: block;
+  min-width: 0;
+  height: 340px;
+  overflow: hidden;
+  background: #e8edf2;
+  border-radius: 5px;
+  text-decoration: none;
+  isolation: isolate;
+  transform: translateZ(0);
+}
+
+/* IMAGE */
+
+.ve-ind-image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.ve-ind-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition:
+    transform 0.85s cubic-bezier(0.2, 0.7, 0.2, 1),
+    filter 0.5s ease;
+}
+
+/* DARK GRADIENT */
+
+.ve-ind-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 21, 39, 0.03) 0%,
+    rgba(5, 21, 39, 0.2) 36%,
+    rgba(5, 21, 39, 0.91) 100%
+  );
+  transition: background 0.4s ease;
+}
+
+/* CARD CONTENT */
+
+.ve-ind-card-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 26px;
+  color: #ffffff;
+}
+
+.ve-ind-number {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 10px;
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 3px;
+  color: #ffffff;
+  background: rgba(8, 30, 52, 0.22);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.ve-ind-card-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.ve-ind-card-text {
+  min-width: 0;
+  flex: 1;
+}
+
+.ve-ind-card-text h3 {
+  margin: 0 0 8px;
+  color: #ffffff !important;
+  font-size: clamp(19px, 1.55vw, 23px);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.ve-ind-card-text p {
+  margin: 0;
+  color: rgba(255,255,255,0.86) !important;
+  font-size: 13px;
+  line-height: 1.65;
+  max-width: 290px;
+}
+
+/* CARD ARROW */
+
+.ve-ind-card-arrow {
+  flex-shrink: 0;
+  width: 37px;
+  height: 37px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,0.65);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 13px;
+  transform: rotate(45deg);
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* =======================================
+   HOVER ANIMATIONS
+======================================= */
+
+@media (hover: hover) {
+  .ve-ind-card:hover .ve-ind-image img {
+    transform: scale(1.085);
+    filter: saturate(1.08);
+  }
+
+  .ve-ind-card:hover .ve-ind-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(5, 21, 39, 0.05) 0%,
+      rgba(5, 21, 39, 0.3) 35%,
+      rgba(4, 35, 67, 0.95) 100%
+    );
+  }
+
+  .ve-ind-card:hover .ve-ind-card-arrow {
+    background: var(--ind-blue);
+    border-color: var(--ind-blue);
+    transform: rotate(45deg) translateY(-3px);
+  }
+}
+
+.ve-ind-card:focus-visible {
+  outline: 3px solid var(--ind-blue);
+  outline-offset: 4px;
+}
+
+/* =======================================
+   SCROLL REVEAL ANIMATION
+======================================= */
+
+.ve-ind-reveal {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ve-ind-reveal:not(.ve-ind-visible) {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+
+  .ve-ind-reveal {
+    transition:
+      opacity 0.75s ease,
+      transform 0.75s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .ve-ind-reveal.ve-ind-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =======================================
+   BOTTOM CTA
+======================================= */
+
+.ve-ind-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 27px;
+  margin-top: 31px;
+  border-top: 1px solid #e9edf1;
+}
+
+.ve-ind-footer p {
+  color: var(--ind-text);
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.ve-ind-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ind-blue);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: gap 0.25s ease;
+}
+
+.ve-ind-footer a:hover {
+  color: var(--ind-navy);
+  gap: 15px;
+}
+
+/* =======================================
+   LAPTOP
+======================================= */
+
+@media (max-width: 1199px) {
+  .ve-industries {
+    padding: 75px 0;
+  }
+
+  .ve-ind-grid {
+    gap: 16px;
+  }
+
+  .ve-ind-card {
+    height: 320px;
+  }
+
+  .ve-ind-card-content {
+    padding: 21px;
+  }
+
+  .ve-ind-card-text h3 {
+    font-size: 19px;
+  }
+}
+
+/* =======================================
+   TABLET
+======================================= */
+
+@media (max-width: 991px) {
+  .ve-ind-header {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .ve-ind-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .ve-ind-card {
+    height: 330px;
+  }
+
+  .ve-ind-header-right p {
+    font-size: 14px;
+  }
+}
+
+/* =======================================
+   MOBILE
+======================================= */
+
+@media (max-width: 767px) {
+  .ve-industries {
+    padding: 60px 0;
+  }
+
+  .ve-ind-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .ve-ind-heading h2 {
+    font-size: clamp(29px, 7vw, 36px);
+    letter-spacing: -0.6px;
+  }
+
+  .ve-ind-header-right {
+    max-width: 100%;
+  }
+
+  .ve-ind-header-right p {
+    font-size: 14px;
+    line-height: 1.75;
+    margin-bottom: 14px;
+  }
+
+  .ve-ind-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .ve-ind-card {
+    height: 330px;
+  }
+
+  .ve-ind-card-text h3 {
+    font-size: 22px;
+  }
+
+  .ve-ind-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+  .ve-ind-card {
+    height: 315px;
+  }
+
+  .ve-ind-card-content {
+    padding: 20px;
+  }
+
+  .ve-ind-card-text h3 {
+    font-size: 20px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .ve-industries *,
+  .ve-industries *::before,
+  .ve-industries *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+/* ===========================================
+   VECTOR ENGINEERS - PRODUCT SHOWCASE
+   Design based on approved reference
+=========================================== */
+
+.ve-products-section {
+  --ve-blue: #086bc2;
+  --ve-navy: #092a4b;
+  --ve-dark: #071f3b;
+  --ve-muted: #53677f;
+
+  position: relative;
+  width: 100%;
+  padding: 75px 0 70px;
+  background:
+    linear-gradient(
+      125deg,
+      #f5faff 0%,
+      #e8f4fd 54%,
+      #edf7ff 100%
+    );
+  overflow: hidden;
+}
+
+.ve-products-section *,
+.ve-products-section *::before,
+.ve-products-section *::after {
+  box-sizing: border-box;
+}
+
+.ve-products-container {
+  width: min(100% - 70px, 1500px);
+  margin: 0 auto;
+}
+
+/* ===========================================
+   TOP CONTENT
+=========================================== */
+
+.ve-products-top {
+  position: relative;
+  display: grid;
+  grid-template-columns: 43% 57%;
+  min-height: 420px;
+  margin-bottom: 25px;
+}
+
+.ve-products-intro {
+  position: relative;
+  z-index: 3;
+  padding: 8px 15px 30px 25px;
+}
+
+.ve-products-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ve-blue);
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.ve-products-line {
+  width: 42px;
+  height: 2px;
+  background: var(--ve-blue);
+  display: inline-block;
+}
+
+.ve-products-intro h2 {
+  color: var(--ve-navy);
+  font-size: clamp(34px, 3.3vw, 54px);
+  line-height: 1.12;
+  letter-spacing: -1.7px;
+  font-weight: 800;
+  margin: 0 0 23px;
+}
+
+.ve-products-intro h2 span {
+  color: var(--ve-blue);
+}
+
+.ve-products-intro > p {
+  color: #4a607a;
+  font-size: clamp(14px, 1vw, 16px);
+  line-height: 1.75;
+  max-width: 530px;
+  margin-bottom: 23px;
+}
+
+/* MAIN CTA */
+
+.ve-products-main-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 15px 23px;
+  min-height: 48px;
+  background: var(--ve-blue);
+  color: #fff !important;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.ve-products-main-btn:hover {
+  background: var(--ve-navy);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 9px 20px rgba(8, 75, 140, 0.16);
+}
+
+.ve-products-main-btn svg {
+  font-size: 13px;
+}
+
+/* ===========================================
+   RIGHT SHOWCASE IMAGE
+=========================================== */
+
+.ve-products-showcase {
+  position: relative;
+  min-height: 420px;
+}
+
+.ve-products-hero-image {
+  position: absolute;
+  top: -75px;
+  left: -10px;
+  right: -35px;
+  bottom: -35px;
+
+  overflow: hidden;
+  border-radius: 52% 0 0 52% / 70% 0 0 70%;
+  background: #dcebf5;
+}
+
+.ve-products-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.ve-products-hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(235, 247, 255, 0.12),
+    rgba(5, 38, 77, 0.11)
+  );
+}
+
+/* FLOATING BLUE PANEL */
+
+.ve-products-benefits {
+  position: absolute;
+  z-index: 4;
+  top: -18px;
+  right: 0;
+  width: 300px;
+  padding: 30px 27px;
+  border-radius: 25px 0 0 25px;
+
+  background: linear-gradient(
+    140deg,
+    #07518d 0%,
+    #062b4d 65%,
+    #031c37 100%
+  );
+
+  box-shadow: 0 22px 40px rgba(4, 35, 67, 0.22);
+  color: #fff;
+}
+
+.ve-products-benefits-line {
+  height: 2px;
+  width: 32px;
+  background: #8fd7ff;
+  margin-bottom: 17px;
+}
+
+.ve-products-benefits > h3 {
+  color: #fff;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 23px;
+}
+
+.ve-products-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 21px;
+}
+
+.ve-products-benefit-item:last-child {
+  margin-bottom: 0;
+}
+
+.ve-products-benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 47px;
+  width: 47px;
+  height: 47px;
+  color: #fff;
+  background: rgba(11, 130, 215, 0.45);
+  border: 1px solid rgba(125, 208, 255, 0.18);
+  border-radius: 50%;
+  font-size: 19px;
+}
+
+.ve-products-benefit-item h4 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 5px;
+}
+
+.ve-products-benefit-item p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 11px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ===========================================
+   SIX PRODUCT CARDS
+=========================================== */
+
+.ve-products-grid {
+  position: relative;
+  z-index: 5;
+
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+
+  margin-top: 0;
+}
+
+.ve-product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 365px;
+  padding: 22px 20px 19px;
+  border-radius: 17px;
+  overflow: hidden;
+  text-decoration: none;
+
+  background: #fff;
+  color: var(--ve-navy);
+
+  box-shadow: 0 8px 24px rgba(15, 65, 110, 0.045);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.ve-product-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 17px 35px rgba(15, 65, 110, 0.12);
+}
+
+/* FEATURED NAVY CARD */
+
+.ve-product-card.ve-product-featured {
+  background: linear-gradient(
+    160deg,
+    #07325b 0%,
+    #052441 57%,
+    #07518a 100%
+  );
+  color: #fff;
+}
+
+.ve-product-card-top {
+  position: relative;
+  z-index: 2;
+}
+
+.ve-product-number {
+  display: block;
+  color: #75b8ed;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  margin-bottom: 11px;
+}
+
+.ve-product-card h3 {
+  color: var(--ve-navy);
+  font-size: clamp(15px, 1.15vw, 19px);
+  font-weight: 750;
+  line-height: 1.28;
+  letter-spacing: -0.35px;
+  margin: 0 0 9px;
+}
+
+.ve-product-card p {
+  color: #53677f;
+  font-size: 12px;
+  line-height: 1.52;
+  margin: 0;
+}
+
+.ve-product-featured h3 {
+  color: #fff;
+}
+
+.ve-product-featured p {
+  color: #d8e6f4;
+}
+
+/* PRODUCT IMAGE */
+
+.ve-product-card-image {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  margin: 7px 0 28px;
+}
+
+.ve-product-card-image img {
+  width: 100%;
+  height: 100%;
+  max-height: 125px;
+  object-fit: contain;
+  object-position: center bottom;
+
+  transition: transform 0.5s ease;
+}
+
+.ve-product-card:hover .ve-product-card-image img {
+  transform: scale(1.07);
+}
+
+/* CIRCULAR ARROW */
+
+.ve-product-card-arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #0879c4;
+  color: #fff;
+  font-size: 14px;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ve-product-card:hover .ve-product-card-arrow {
+  background: #102f50;
+  transform: translateX(4px);
+}
+
+.ve-product-featured .ve-product-card-arrow {
+  background: #fff;
+  color: #07528d;
+}
+
+.ve-product-featured:hover .ve-product-card-arrow {
+  background: #ccecff;
+  color: #07528d;
+}
+
+/* ===========================================
+   BOTTOM HIGHLIGHTS STRIP
+=========================================== */
+
+.ve-products-bottom {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  margin-top: 30px;
+  padding: 30px 35px;
+
+  background: linear-gradient(
+    115deg,
+    #e0f0fc,
+    #edf7ff
+  );
+
+  border-radius: 17px;
+}
+
+.ve-products-bottom-heading {
+  flex: 0 0 28%;
+  padding-right: 20px;
+  border-right: 1px solid #a6cbed;
+}
+
+.ve-products-bottom-heading h3 {
+  margin: 0;
+  color: var(--ve-navy);
+  font-size: clamp(19px, 1.65vw, 26px);
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+  font-weight: 750;
+}
+
+.ve-products-bottom-heading h3 span {
+  color: var(--ve-blue);
+}
+
+.ve-products-bottom-features {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ve-products-bottom-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 0 14px;
+  border-right: 1px solid #c6dff2;
+}
+
+.ve-products-bottom-item:last-child {
+  border-right: 0;
+}
+
+.ve-products-bottom-icon {
+  color: var(--ve-navy);
+  font-size: 27px;
+  flex-shrink: 0;
+}
+
+.ve-products-bottom-item h4 {
+  margin: 0 0 4px;
+  color: var(--ve-navy);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ve-products-bottom-item p {
+  margin: 0;
+  color: #62758a;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+/* ===========================================
+   SCROLL REVEAL
+=========================================== */
+
+.ve-product-reveal {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ve-product-reveal:not(.visible) {
+    opacity: 0;
+    translate: 0 30px;
+  }
+
+  .ve-product-reveal {
+    transition:
+      opacity 0.7s ease,
+      translate 0.7s ease;
+
+    transition-delay: var(--card-delay, 0ms);
+  }
+
+  .ve-product-reveal.visible {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* ===========================================
+   LARGE LAPTOPS
+=========================================== */
+
+@media (max-width: 1399px) {
+  .ve-products-container {
+    width: min(100% - 50px, 1320px);
+  }
+
+  .ve-products-intro h2 {
+    font-size: 43px;
+  }
+
+  .ve-products-benefits {
+    width: 270px;
+  }
+
+  .ve-products-grid {
+    gap: 11px;
+  }
+
+  .ve-product-card {
+    padding: 19px 15px;
+    height: 345px;
+  }
+
+  .ve-product-card h3 {
+    font-size: 16px;
+  }
+
+  .ve-product-card-arrow {
+    left: 15px;
+    bottom: 17px;
+  }
+
+  .ve-products-bottom {
+    padding: 25px;
+    gap: 18px;
+  }
+}
+
+/* ===========================================
+   TABLETS AND SMALL LAPTOPS
+=========================================== */
+
+@media (max-width: 1199px) {
+  .ve-products-top {
+    grid-template-columns: 50% 50%;
+  }
+
+  .ve-products-intro {
+    padding-left: 0;
+  }
+
+  .ve-products-intro h2 {
+    font-size: 37px;
+  }
+
+  .ve-products-benefits {
+    right: -10px;
+    width: 230px;
+    padding: 22px 19px;
+  }
+
+  .ve-products-benefits > h3 {
+    font-size: 16px;
+  }
+
+  .ve-products-benefit-item {
+    gap: 9px;
+    margin-bottom: 14px;
+  }
+
+  .ve-products-benefit-icon {
+    flex-basis: 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .ve-products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+  }
+
+  .ve-product-card {
+    height: 340px;
+    padding: 23px;
+  }
+
+  .ve-product-card h3 {
+    font-size: 20px;
+  }
+
+  .ve-product-card p {
+    font-size: 13px;
+  }
+
+  .ve-product-card-arrow {
+    left: 23px;
+  }
+
+  .ve-products-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ve-products-bottom-heading {
+    flex: auto;
+    border-right: none;
+    padding: 0;
+  }
+
+  .ve-products-bottom-features {
+    width: 100%;
+  }
+}
+
+/* ===========================================
+   TABLET
+=========================================== */
+
+@media (max-width: 767px) {
+  .ve-products-section {
+    padding: 60px 0;
+  }
+
+  .ve-products-container {
+    width: min(100% - 32px, 650px);
+  }
+
+  .ve-products-top {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .ve-products-intro {
+    padding: 0;
+  }
+
+  .ve-products-intro h2 {
+    font-size: clamp(32px, 6vw, 43px);
+  }
+
+  .ve-products-intro > p {
+    font-size: 14px;
+  }
+
+  .ve-products-showcase {
+    min-height: 360px;
+    margin-top: 35px;
+  }
+
+  .ve-products-hero-image {
+    inset: 0;
+    border-radius: 110px 12px 12px 12px;
+  }
+
+  .ve-products-benefits {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    width: min(75%, 300px);
+    border-radius: 17px 0 12px 0;
+  }
+
+  .ve-products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .ve-product-card {
+    height: 330px;
+    padding: 18px;
+  }
+
+  .ve-product-card h3 {
+    font-size: 17px;
+  }
+
+  .ve-product-card p {
+    font-size: 12px;
+  }
+
+  .ve-product-card-arrow {
+    left: 18px;
+  }
+
+  .ve-products-bottom-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 0;
+  }
+
+  .ve-products-bottom-item:nth-child(2) {
+    border-right: 0;
+  }
+
+  .ve-products-bottom-item {
+    padding: 0 12px;
+  }
+}
+
+/* ===========================================
+   SMALL MOBILE
+=========================================== */
+
+@media (max-width: 480px) {
+  .ve-products-intro h2 {
+    font-size: 31px;
+    letter-spacing: -1px;
+  }
+
+  .ve-products-intro h2 br {
+    display: none;
+  }
+
+  .ve-products-showcase {
+    min-height: 420px;
+  }
+
+  .ve-products-benefits {
+    width: 82%;
+  }
+
+  .ve-products-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .ve-product-card {
+    height: 335px;
+    padding: 25px;
+  }
+
+  .ve-product-card h3 {
+    font-size: 21px;
+  }
+
+  .ve-product-card p {
+    font-size: 14px;
+    max-width: 260px;
+  }
+
+  .ve-product-card-image img {
+    max-height: 145px;
+  }
+
+  .ve-product-card-arrow {
+    left: 25px;
+  }
+
+  .ve-products-bottom {
+    padding: 23px 18px;
+  }
+
+  .ve-products-bottom-features {
+    grid-template-columns: 1fr;
+  }
+
+  .ve-products-bottom-item {
+    border: none;
+    padding: 0;
+  }
+}
+
+/* ACCESSIBILITY */
+
+.ve-product-card:focus-visible,
+.ve-products-main-btn:focus-visible {
+  outline: 3px solid #0879c4;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ve-products-section *,
+  .ve-products-section *::before,
+  .ve-products-section *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==============================================
+   VECTOR ENGINEERS
+   PREMIUM SMOOTH HOVER ANIMATIONS
+============================================== */
+
+.ve-products-section {
+  --ve-smooth-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Smooth product cards */
+
+.ve-products-section .ve-product-card {
+  transform: translate3d(0, 0, 0);
+  box-shadow: 0 8px 24px rgba(15, 65, 110, 0.045);
+
+  transition:
+    transform 0.65s var(--ve-smooth-ease),
+    box-shadow 0.65s var(--ve-smooth-ease),
+    background-color 0.45s ease;
+}
+
+/* Smooth product image */
+
+.ve-products-section .ve-product-card-image {
+  overflow: hidden;
+}
+
+.ve-products-section .ve-product-card-image img {
+  display: block;
+  transform: translate3d(0, 0, 0) scale(1);
+
+  transition:
+    transform 0.85s var(--ve-smooth-ease),
+    filter 0.65s ease;
+}
+
+/* Smooth circular arrow */
+
+.ve-products-section .ve-product-card-arrow {
+  transform: translate3d(0, 0, 0);
+  transition:
+    transform 0.55s var(--ve-smooth-ease),
+    background-color 0.35s ease,
+    color 0.35s ease;
+}
+
+/* Card titles */
+
+.ve-products-section .ve-product-card h3 {
+  transition: color 0.35s ease;
+}
+
+/* DESKTOP HOVER EFFECTS */
+
+@media (hover: hover) and (pointer: fine) {
+
+  .ve-products-section .ve-product-card:hover {
+    transform: translate3d(0, -5px, 0);
+
+    box-shadow:
+      0 18px 36px rgba(15, 65, 110, 0.11);
+  }
+
+  .ve-products-section .ve-product-card:hover
+  .ve-product-card-image img {
+    transform: translate3d(0, -4px, 0) scale(1.045);
+  }
+
+  .ve-products-section .ve-product-card:hover
+  .ve-product-card-arrow {
+    transform: translate3d(4px, 0, 0);
+    background-color: #102f50;
+    color: #ffffff;
+  }
+
+  /* Featured dark-blue card */
+
+  .ve-products-section .ve-product-featured:hover
+  .ve-product-card-arrow {
+    background-color: #ffffff;
+    color: #0879c4;
+  }
+
+}
+
+/* Smooth button animation */
+
+.ve-products-section .ve-products-main-btn {
+  transform: translate3d(0, 0, 0);
+
+  transition:
+    background-color 0.4s ease,
+    transform 0.55s var(--ve-smooth-ease),
+    box-shadow 0.55s var(--ve-smooth-ease);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .ve-products-section .ve-products-main-btn:hover {
+    transform: translate3d(0, -2px, 0);
+    box-shadow: 0 10px 24px rgba(8, 75, 140, 0.16);
+  }
+}
+
+/* ==============================================
+   FIX SCROLL REVEAL + HOVER CONFLICT
+============================================== */
+
+/*
+  The original reveal animation uses translate,
+  while hover uses transform.
+
+  Keep reveal animations on the translate property
+  and hover animations on transform.
+*/
+
+@media (prefers-reduced-motion: no-preference) {
+
+  .ve-products-section .ve-product-reveal {
+    opacity: 0;
+    translate: 0 24px;
+
+    transition:
+      opacity 0.75s ease,
+      translate 0.75s var(--ve-smooth-ease),
+      transform 0.65s var(--ve-smooth-ease),
+      box-shadow 0.65s var(--ve-smooth-ease);
+
+    transition-delay:
+      var(--card-delay, 0ms),
+      var(--card-delay, 0ms),
+      0ms,
+      0ms;
+  }
+
+  .ve-products-section .ve-product-reveal.visible {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+}
+
+/* ==============================================
+   MOBILE - NO HOVER JUMPING
+============================================== */
+
+@media (hover: none) {
+  .ve-products-section .ve-product-card:hover {
+    transform: none;
+  }
+
+  .ve-products-section .ve-product-card:hover
+  .ve-product-card-image img {
+    transform: none;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .ve-products-section .ve-product-reveal,
+  .ve-products-section .ve-product-reveal.visible {
+    opacity: 1;
+    translate: none;
+  }
+
+  .ve-products-section .ve-product-card,
+  .ve-products-section .ve-product-card-image img,
+  .ve-products-section .ve-product-card-arrow,
+  .ve-products-section .ve-products-main-btn {
+    transition: none !important;
+    transform: none !important;
+  }
+
+}

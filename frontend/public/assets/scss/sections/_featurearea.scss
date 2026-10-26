@@ -1,0 +1,449 @@
+
+/* ==========================================
+   VECTOR ENGINEERS - FEATURE SECTION
+========================================== */
+
+/* Main Section */
+
+.feature-area {
+  position: relative;
+}
+
+/* Brand subtitle */
+
+.feature-area .section-title .subtitle {
+  color: #0879c4;
+}
+
+/* Main heading */
+
+.feature-area .section-title .title {
+  color: #102f50;
+}
+
+/* Section description */
+
+.feature-area .section-title .content {
+  color: #596777;
+  line-height: 1.7;
+}
+
+/* Left decorative line */
+
+.feature-area .section-title .left-line::before {
+  background: #0879c4 !important;
+}
+
+/* Card link */
+
+.ve-feature-card-link {
+  display: block;
+  height: 100%;
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.ve-feature-card-link:hover {
+  text-decoration: none;
+}
+
+/* Card Styling */
+
+.feature-area .feature-wrap {
+  position: relative;
+  height: 100%;
+  min-height: 275px;
+  padding: 35px 28px;
+  border-radius: 10px;
+  background: #f4f8fc !important;
+  border: 1px solid #e7edf3;
+  transition: all 0.3s ease;
+}
+
+/* Alternate card backgrounds */
+
+.feature-area .feature-wrap.bg-pink {
+  background: #edf7fe !important;
+}
+
+.feature-area .feature-wrap.bg-ash {
+  background: #f6f8fb !important;
+}
+
+.feature-area .feature-wrap.bg-sky {
+  background: #edf5fa !important;
+}
+
+/* Card hover */
+
+.ve-feature-card-link:hover .feature-wrap {
+  transform: translateY(-5px);
+  background: #ffffff !important;
+  border-color: #b9ddf6;
+  box-shadow: 0 14px 32px rgba(16, 47, 80, 0.09);
+}
+
+/* Card icon */
+
+.feature-area .ve-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 22px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #0879c4 !important;
+  font-size: 28px;
+  transition: all 0.3s ease;
+}
+
+.feature-area .ve-feature-icon svg {
+  width: 28px;
+  height: 28px;
+  color: #0879c4 !important;
+}
+
+.ve-feature-card-link:hover .ve-feature-icon {
+  background: #0879c4;
+}
+
+.ve-feature-card-link:hover .ve-feature-icon svg {
+  color: #ffffff !important;
+}
+
+/* Card heading */
+
+.feature-area .feature-wrap h5 {
+  color: #102f50 !important;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-transform: none;
+  transition: color 0.3s ease;
+}
+
+/* Card description */
+
+.feature-area .feature-wrap p {
+  color: #5d6b7a !important;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+/* Explore More */
+
+.ve-feature-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0879c4;
+  transition: gap 0.3s ease;
+}
+
+.ve-feature-card-link:hover .ve-feature-explore {
+  gap: 15px;
+}
+
+.ve-feature-explore svg {
+  font-size: 12px;
+}
+
+/* Slider spacing */
+
+.feature-area .feature-slider .slick-slide {
+  padding: 10px 12px 18px;
+}
+
+.feature-area .feature-slider .slick-list {
+  margin: 0 -12px;
+}
+
+/* Equal height cards */
+
+.feature-area .feature-slider .slick-track {
+  display: flex !important;
+}
+
+.feature-area .feature-slider .slick-slide {
+  height: auto;
+}
+
+.feature-area .feature-slider .slick-slide > div {
+  height: 100%;
+}
+
+/* Responsive */
+
+@media (max-width: 991px) {
+  .feature-area .feature-wrap {
+    min-height: 270px;
+    padding: 28px 24px;
+  }
+
+  .feature-area .feature-wrap h5 {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 575px) {
+  .feature-area .feature-wrap {
+    min-height: 250px;
+    padding: 25px 22px;
+  }
+
+  .feature-area .feature-wrap h5 {
+    font-size: 18px;
+  }
+
+  .feature-area .feature-wrap p {
+    font-size: 13px;
+  }
+}
+
+/* =========================================
+   VECTOR ENGINEERS
+   AUTO-SCROLLING PRODUCT ICON STRIP
+========================================= */
+
+.ve-product-marquee {
+  --ve-blue: #0879c4;
+  --ve-navy: #102f50;
+
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  padding: 25px 0;
+
+  background: #f5f9fd;
+  border-top: 1px solid #eaf0f6;
+  border-bottom: 1px solid #eaf0f6;
+}
+
+/* SCROLLING TRACK */
+
+.ve-product-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: veMarqueeScroll 70s linear infinite;
+}
+
+/* EACH DUPLICATED GROUP */
+
+.ve-product-marquee-group {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: stretch;
+  gap: 15px;
+  padding-right: 15px;
+}
+
+/* ICON CARD */
+
+.ve-product-marquee-item {
+  display: flex;
+  flex: 0 0 155px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 132px;
+  padding: 17px 12px;
+
+  text-align: center;
+
+  background: #ffffff;
+  border: 1px solid #e6edf4;
+  border-radius: 12px;
+
+  box-shadow: 0 5px 18px rgba(16, 47, 80, 0.035);
+
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* ICON */
+
+.ve-product-marquee-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 56px;
+  height: 56px;
+
+  margin-bottom: 11px;
+
+  border-radius: 50%;
+  background: #eaf5fd;
+  color: #0879c4;
+
+  font-size: 25px;
+
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+
+.ve-product-marquee-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+/* PRODUCT NAME */
+
+.ve-product-marquee-name {
+  display: block;
+  color: #102f50;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* INFINITE ANIMATION */
+
+@keyframes veMarqueeScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* PAUSE ON HOVER */
+
+.ve-product-marquee:hover .ve-product-marquee-track {
+  animation-play-state: paused;
+}
+
+/* HOVER EFFECTS */
+
+@media (hover: hover) and (pointer: fine) {
+  .ve-product-marquee-item:hover {
+    background: #ffffff;
+    border-color: #b8dff8;
+
+    box-shadow:
+      0 10px 24px rgba(8, 121, 196, 0.1);
+  }
+
+  .ve-product-marquee-item:hover
+  .ve-product-marquee-icon {
+    background: #0879c4;
+    color: #ffffff;
+    transform: scale(1.08);
+  }
+}
+
+/* GRADIENT EDGES */
+
+.ve-product-marquee::before,
+.ve-product-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 65px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.ve-product-marquee::before {
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    #f5f9fd 0%,
+    transparent 100%
+  );
+}
+
+.ve-product-marquee::after {
+  right: 0;
+  background: linear-gradient(
+    270deg,
+    #f5f9fd 0%,
+    transparent 100%
+  );
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+  .ve-product-marquee {
+    padding: 20px 0;
+  }
+
+  .ve-product-marquee-item {
+    flex-basis: 140px;
+    min-height: 125px;
+  }
+
+  .ve-product-marquee-track {
+    animation-duration: 60s;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+  .ve-product-marquee {
+    padding: 16px 0;
+  }
+
+  .ve-product-marquee-group {
+    gap: 10px;
+    padding-right: 10px;
+  }
+
+  .ve-product-marquee-item {
+    flex-basis: 120px;
+    min-height: 115px;
+    padding: 13px 8px;
+  }
+
+  .ve-product-marquee-icon {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 9px;
+  }
+
+  .ve-product-marquee-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .ve-product-marquee-name {
+    font-size: 11px;
+  }
+
+  .ve-product-marquee::before,
+  .ve-product-marquee::after {
+    width: 25px;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .ve-product-marquee {
+    overflow-x: auto;
+  }
+
+  .ve-product-marquee-track {
+    animation: none;
+  }
+
+  .ve-product-marquee-group[aria-hidden="true"] {
+    display: none;
+  }
+}
