@@ -7,7 +7,7 @@ const CounterOne = () => {
   // Replace these values with verified company figures.
 
 const stats = {
-  experience: 14,
+  experience: 16,
   clients: 500,   // Example: confirm actual count
   projects: 250,  // Example: confirm actual count
   brands: 6,
@@ -37,10 +37,10 @@ const stats = {
                   </TrackVisibility>
                 </h2>
                 <h5>YEARS OF EXPERIENCE</h5>
-                <p>
+                {/* <p>
                   Building expertise in electrical products and
                   solutions for diverse project requirements.
-                </p>
+                </p> */}
               </div>
             </div>
 
@@ -58,10 +58,10 @@ const stats = {
                   </TrackVisibility>
                 </h2>
                 <h5>CLIENTS SERVED</h5>
-                <p>
+                {/* <p>
                   Supporting customers with dependable electrical
                   products and technical guidance.
-                </p>
+                </p> */}
               </div>
             </div>
 
@@ -79,10 +79,10 @@ const stats = {
                   </TrackVisibility>
                 </h2>
                 <h5>PROJECTS SUPPORTED</h5>
-                <p>
+                {/* <p>
                   Serving industrial, commercial and residential
                   electrical project requirements.
-                </p>
+                </p> */}
               </div>
             </div>
 
@@ -100,10 +100,10 @@ const stats = {
                   </TrackVisibility>
                 </h2>
                 <h5>BRAND PARTNERS</h5>
-                <p>
+                {/* <p>
                   Offering a diverse portfolio of electrical
                   products from established brands.
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

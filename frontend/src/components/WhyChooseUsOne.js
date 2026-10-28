@@ -12,16 +12,8 @@ const WhyChooseUsOne = () => {
         className='wcu-area bg-overlay'
       
       >
-        <img
-          className='img-1'
-          src='assets/img/wcu/1.png'
-          alt='Vector Engineers'
-        />
-        <img
-          className='img-2'
-          src='assets/img/wcu/2.png'
-          alt='Vector Engineers'
-        />
+        
+        
 
         <div className='container'>
           <div className='row justify-content-center'>
@@ -39,9 +31,7 @@ const WhyChooseUsOne = () => {
             <div className='col-xl-5 col-lg-6 order-lg-1'>
               <div className='section-title style-white mb-0'>
 
-                <h4 className='subtitle style-2'>
-                  WHY CHOOSE VECTOR ENGINEERS
-                </h4>
+                
 
                 <h2 className='title'>
                   YOUR TRUSTED ELECTRICAL SOLUTIONS PARTNER

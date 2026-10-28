@@ -1,139 +1,201 @@
 
-import React from "react";
-import TrackVisibility from "react-on-screen";
-import CountUp from "react-countup";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import {
+  FaArrowRight,
+  FaCheck,
+  FaBolt,
+} from "react-icons/fa";
+
+
+const highlights = [
+  "Electrical Product Expertise",
+  "Industrial & Commercial Applications",
+  "Established Electrical Brands",
+  "Project-Focused Guidance",
+];
 
 const AboutOne = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const elements = section.querySelectorAll(
+      ".ve-home-about-reveal"
+    );
+
+    if (
+      !("IntersectionObserver" in window) ||
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches
+    ) {
+      elements.forEach((el) =>
+        el.classList.add("is-visible")
+      );
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -35px 0px",
+      }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <>
-      {/* about area start */}
-      <div className='about-area pd-top-90 pd-bottom-50'>
-        <div className='container'>
-          <div className='about-area-inner'>
-            <div className='row'>
-              <div className='col-lg-6'>
-                <div className='about-thumb-wrap'>
-                  <img
-                    className='img-1'
-                    src='./assets/img/about/shape.png'
-                    alt='Vector Engineers'
-                  />
-                  <img
-                    className='img-2'
-                    src='./assets/img/hm-about-01.jpg'
-                    alt='Vector Engineers'
-                  />
-                  <img
-                    className='img-3'
-                    src='./assets/img/hm-about-02.jpg'
-                    alt='Vector Engineers'
-                  />
-                  <div className='exprience-wrap'>
-                    <img
-                      src='./assets/img/about/shape-3.png'
-                      alt='Vector Engineers'
-                    />
-                    <div className='details'>
-                      <TrackVisibility once>
-                        {({ isVisible }) =>
-                          isVisible && (
-                            <h1>
-                              <CountUp
-                                delay={0}
-                                start={0}
-                                end={16}
-                              />
-                            </h1>
-                          )
-                        }
-                      </TrackVisibility>
-                      <p>YEARS OF EXPERIENCE</p>
-                    </div>
-                  </div>
-                </div>
+    <section
+      className="ve-home-about"
+      ref={sectionRef}
+      aria-labelledby="ve-home-about-title"
+    >
+      <div className="container">
+
+        <div className="row align-items-center gy-5">
+
+          {/* LEFT - INDUSTRIAL PHOTOGRAPH */}
+          <div className="col-lg-6">
+
+            <div className="ve-home-about-visual ve-home-about-reveal">
+
+              <div className="ve-home-about-image">
+                <img
+                  src="/assets/img/hm-about-01.jpg"
+                  alt="Industrial electrical switchgear and power distribution equipment"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
 
-              <div className='col-lg-6 align-self-center'>
-                <div className='about-inner-wrap'>
-                  <div className='section-title mb-0'>
-                    <h4 className='subtitle'>
-                      ABOUT VECTOR ENGINEERS
-                    </h4>
+              {/* SMALL CORPORATE PHOTO CAPTION */}
+              <div className="ve-home-about-photo-caption">
 
-                    <h2 className='title'>
-                      YOUR TRUSTED PARTNER IN ELECTRICAL SOLUTIONS
-                    </h2>
-
-                    <p className='content left-line'>
-                      Established in 2010, Vector Engineers
-                      provides dependable electrical products
-                      and solutions for industrial, commercial
-                      and residential requirements. We focus
-                      on quality, reliability and technical
-                      expertise to support efficient and
-                      safe electrical systems.
-                    </p>
-
-                    <div className='row'>
-                      <div className='col-xl-6 col-lg-12 col-md-6'>
-                        <ul className='list-inner-wrap mb-mb-0 mb-3 mb-lg-3 mb-xl-0'>
-                          <li>
-                            <img
-                              src='./assets/img/icon/check.png'
-                              alt='Check'
-                            />{" "}
-                            Electrical Product Expertise
-                          </li>
-
-                          <li>
-                            <img
-                              src='./assets/img/icon/check.png'
-                              alt='Check'
-                            />
-                            Industrial & Residential Solutions
-                          </li>
-
-                          <li>
-                            <img
-                              src='./assets/img/icon/check.png'
-                              alt='Check'
-                            />
-                            Trusted Electrical Brands
-                          </li>
-
-                          <li>
-                            <img
-                              src='./assets/img/icon/check.png'
-                              alt='Check'
-                            />
-                            Project-Focused Support
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div className='col-xl-6 col-lg-12 col-md-6 align-self-center'>
-                        
-                      </div>
-                    </div>
-
-                    <div className='btn-wrap'>
-                      <Link className='btn btn-base' to='#'>
-                        MORE ABOUT US
-                      </Link>
-
-                      
-                    </div>
-
-                  </div>
+                <div className="ve-home-about-caption-icon">
+                  <FaBolt />
                 </div>
+
+                <div>
+                  <span>ENGINEERING RELIABILITY</span>
+
+                  <p>
+                    Electrical solutions for modern
+                    industries and infrastructure.
+                  </p>
+                </div>
+
               </div>
+
+              {/* PHOTO ACCENT */}
+              <span
+                className="ve-home-about-image-accent"
+                aria-hidden="true"
+              />
+
             </div>
+
           </div>
+
+          {/* RIGHT - COMPANY INTRODUCTION */}
+          <div className="col-lg-6">
+
+            <div className="ve-home-about-content">
+
+              <div className="ve-home-about-eyebrow ve-home-about-reveal">
+                <span />
+                ABOUT VECTOR ENGINEERS
+              </div>
+
+              <h2
+                className="ve-home-about-title ve-home-about-reveal"
+                id="ve-home-about-title"
+              >
+                Powering Progress Through
+                <span> Reliable Electrical Solutions.</span>
+              </h2>
+
+              <p className="ve-home-about-lead ve-home-about-reveal">
+                Vector Engineers provides electrical
+                products and application-focused solutions
+                for industrial, commercial and residential
+                requirements.
+              </p>
+
+              <p className="ve-home-about-description ve-home-about-reveal">
+                With a focus on quality products, technical
+                knowledge and customer requirements, we
+                support businesses, contractors and project
+                developers in selecting electrical solutions
+                suited to their applications.
+              </p>
+
+              <p className="ve-home-about-description ve-home-about-reveal">
+                Our portfolio covers energy metering,
+                switchgear and protection, power
+                distribution, control systems, wires and
+                cables, and other essential electrical
+                products.
+              </p>
+
+              {/* PRODUCT-FOCUSED HIGHLIGHTS */}
+              <div className="ve-home-about-highlights ve-home-about-reveal">
+
+                {highlights.map((item) => (
+                  <div
+                    className="ve-home-about-highlight"
+                    key={item}
+                  >
+                    <span className="ve-home-about-check">
+                      <FaCheck />
+                    </span>
+
+                    <span>{item}</span>
+                  </div>
+                ))}
+
+              </div>
+
+              {/* ACTION */}
+              <div className="ve-home-about-action ve-home-about-reveal">
+
+                <Link
+                  to="/about"
+                  className="ve-home-about-button"
+                >
+                  More About Us
+                  <FaArrowRight />
+                </Link>
+
+                <span className="ve-home-about-action-text">
+                  Your requirements.
+                  <br />
+                  Our expertise.
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
+
       </div>
-      {/* about area end */}
-    </>
+    </section>
   );
 };
 

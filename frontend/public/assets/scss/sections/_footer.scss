@@ -331,7 +331,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 35px;
-  padding: 45px 0;
+  padding: 10px 0;
   position: relative;
   z-index: 2;
 }
@@ -409,7 +409,7 @@
 ============================================= */
 
 .ve-footer-main {
-  padding: 29px 0 30px;
+  padding: 29px 0 0px;
   background: #0b2945;
 }
 
@@ -433,7 +433,7 @@
 
 .ve-footer-about > p {
   max-width: 340px;
-  color: #b7c9d9 !important;
+  color: #ffffff !important;
   font-size: 13px;
   line-height: 1.9;
   margin: 0 0 22px;
@@ -524,7 +524,7 @@
 }
 
 .ve-footer-widget ul li {
-  margin: 0 0 15px;
+  margin: 0 0 5px;
   padding: 0;
 }
 
@@ -533,7 +533,7 @@
   align-items: center;
   gap: 10px;
 
-  color: #b7c9d9 !important;
+  color: #ffffff !important;
   font-size: 13px;
   font-weight: 400;
   line-height: 1.6;
@@ -621,7 +621,7 @@
 .ve-footer-contact-item a {
   display: block;
   width: fit-content;
-  color: #b7c9d9 !important;
+  color: #ffffff !important;
   font-size: 12px;
   line-height: 1.9;
   text-decoration: none !important;
@@ -646,8 +646,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  min-height: 75px;
-  padding: 14px 0;
+  min-height: 35px;
+  padding: 0px 0;
 }
 
 .ve-footer-bottom-inner p {
@@ -724,7 +724,7 @@
   }
 
   .ve-footer-cta-inner {
-    padding: 40px 0;
+    padding: 15px 0;
   }
 }
 

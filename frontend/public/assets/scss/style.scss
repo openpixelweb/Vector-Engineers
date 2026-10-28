@@ -59,467 +59,6 @@
 
 
 
-
-
-
-/* =======================================
-   VECTOR ENGINEERS - INDUSTRIES SECTION
-   Premium Corporate Design
-======================================= */
-
-.ve-industries {
-  --ind-blue: #0879c4;
-  --ind-navy: #102f50;
-  --ind-text: #25374a;
-  --ind-muted: #687787;
-
-  position: relative;
-  padding: 95px 0 85px;
-  background: #ffffff;
-  overflow: hidden;
-}
-
-.ve-industries *,
-.ve-industries *::before,
-.ve-industries *::after {
-  box-sizing: border-box;
-}
-
-/* SECTION HEADER */
-
-.ve-ind-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 45px;
-  margin-bottom: 40px;
-}
-
-.ve-ind-heading {
-  flex: 1.2;
-}
-
-.ve-ind-eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 19px;
-  color: var(--ind-blue);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.ve-ind-line {
-  display: inline-block;
-  width: 31px;
-  height: 2px;
-  background: var(--ind-blue);
-}
-
-.ve-ind-heading h2 {
-  margin: 0;
-  color: var(--ind-navy);
-  font-size: clamp(32px, 3vw, 46px);
-  font-weight: 700;
-  line-height: 1.18;
-  letter-spacing: -1.2px;
-}
-
-.ve-ind-heading h2 span {
-  color: var(--ind-blue);
-}
-
-.ve-ind-header-right {
-  flex: 0.8;
-  max-width: 420px;
-  padding-bottom: 5px;
-}
-
-.ve-ind-header-right p {
-  margin: 0 0 20px;
-  color: var(--ind-muted);
-  font-size: 15px;
-  line-height: 1.85;
-}
-
-.ve-ind-view-all {
-  display: inline-flex;
-  align-items: center;
-  gap: 11px;
-  color: var(--ind-blue);
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: gap 0.3s ease;
-}
-
-.ve-ind-view-all:hover {
-  gap: 17px;
-  color: var(--ind-navy);
-}
-
-/* =======================================
-   GRID LAYOUT
-======================================= */
-
-.ve-ind-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-}
-
-/* CARD */
-
-.ve-ind-card {
-  position: relative;
-  display: block;
-  min-width: 0;
-  height: 340px;
-  overflow: hidden;
-  background: #e8edf2;
-  border-radius: 5px;
-  text-decoration: none;
-  isolation: isolate;
-  transform: translateZ(0);
-}
-
-/* IMAGE */
-
-.ve-ind-image {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-}
-
-.ve-ind-image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition:
-    transform 0.85s cubic-bezier(0.2, 0.7, 0.2, 1),
-    filter 0.5s ease;
-}
-
-/* DARK GRADIENT */
-
-.ve-ind-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(5, 21, 39, 0.03) 0%,
-    rgba(5, 21, 39, 0.2) 36%,
-    rgba(5, 21, 39, 0.91) 100%
-  );
-  transition: background 0.4s ease;
-}
-
-/* CARD CONTENT */
-
-.ve-ind-card-content {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 26px;
-  color: #ffffff;
-}
-
-.ve-ind-number {
-  width: fit-content;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 7px 10px;
-  border: 1px solid rgba(255,255,255,0.45);
-  border-radius: 3px;
-  color: #ffffff;
-  background: rgba(8, 30, 52, 0.22);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.ve-ind-card-bottom {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 14px;
-}
-
-.ve-ind-card-text {
-  min-width: 0;
-  flex: 1;
-}
-
-.ve-ind-card-text h3 {
-  margin: 0 0 8px;
-  color: #ffffff !important;
-  font-size: clamp(19px, 1.55vw, 23px);
-  font-weight: 700;
-  line-height: 1.35;
-}
-
-.ve-ind-card-text p {
-  margin: 0;
-  color: rgba(255,255,255,0.86) !important;
-  font-size: 13px;
-  line-height: 1.65;
-  max-width: 290px;
-}
-
-/* CARD ARROW */
-
-.ve-ind-card-arrow {
-  flex-shrink: 0;
-  width: 37px;
-  height: 37px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(255,255,255,0.65);
-  border-radius: 50%;
-  color: #ffffff;
-  font-size: 13px;
-  transform: rotate(45deg);
-  transition:
-    background 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.3s ease;
-}
-
-/* =======================================
-   HOVER ANIMATIONS
-======================================= */
-
-@media (hover: hover) {
-  .ve-ind-card:hover .ve-ind-image img {
-    transform: scale(1.085);
-    filter: saturate(1.08);
-  }
-
-  .ve-ind-card:hover .ve-ind-overlay {
-    background: linear-gradient(
-      180deg,
-      rgba(5, 21, 39, 0.05) 0%,
-      rgba(5, 21, 39, 0.3) 35%,
-      rgba(4, 35, 67, 0.95) 100%
-    );
-  }
-
-  .ve-ind-card:hover .ve-ind-card-arrow {
-    background: var(--ind-blue);
-    border-color: var(--ind-blue);
-    transform: rotate(45deg) translateY(-3px);
-  }
-}
-
-.ve-ind-card:focus-visible {
-  outline: 3px solid var(--ind-blue);
-  outline-offset: 4px;
-}
-
-/* =======================================
-   SCROLL REVEAL ANIMATION
-======================================= */
-
-.ve-ind-reveal {
-  opacity: 1;
-  transform: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .ve-ind-reveal:not(.ve-ind-visible) {
-    opacity: 0;
-    transform: translateY(32px);
-  }
-
-  .ve-ind-reveal {
-    transition:
-      opacity 0.75s ease,
-      transform 0.75s cubic-bezier(0.2, 0.7, 0.2, 1);
-    transition-delay: var(--reveal-delay, 0ms);
-  }
-
-  .ve-ind-reveal.ve-ind-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* =======================================
-   BOTTOM CTA
-======================================= */
-
-.ve-ind-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding-top: 27px;
-  margin-top: 31px;
-  border-top: 1px solid #e9edf1;
-}
-
-.ve-ind-footer p {
-  color: var(--ind-text);
-  margin: 0;
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.ve-ind-footer a {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--ind-blue);
-  font-size: 13px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: gap 0.25s ease;
-}
-
-.ve-ind-footer a:hover {
-  color: var(--ind-navy);
-  gap: 15px;
-}
-
-/* =======================================
-   LAPTOP
-======================================= */
-
-@media (max-width: 1199px) {
-  .ve-industries {
-    padding: 75px 0;
-  }
-
-  .ve-ind-grid {
-    gap: 16px;
-  }
-
-  .ve-ind-card {
-    height: 320px;
-  }
-
-  .ve-ind-card-content {
-    padding: 21px;
-  }
-
-  .ve-ind-card-text h3 {
-    font-size: 19px;
-  }
-}
-
-/* =======================================
-   TABLET
-======================================= */
-
-@media (max-width: 991px) {
-  .ve-ind-header {
-    align-items: flex-start;
-    gap: 20px;
-  }
-
-  .ve-ind-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-  }
-
-  .ve-ind-card {
-    height: 330px;
-  }
-
-  .ve-ind-header-right p {
-    font-size: 14px;
-  }
-}
-
-/* =======================================
-   MOBILE
-======================================= */
-
-@media (max-width: 767px) {
-  .ve-industries {
-    padding: 60px 0;
-  }
-
-  .ve-ind-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    margin-bottom: 30px;
-  }
-
-  .ve-ind-heading h2 {
-    font-size: clamp(29px, 7vw, 36px);
-    letter-spacing: -0.6px;
-  }
-
-  .ve-ind-header-right {
-    max-width: 100%;
-  }
-
-  .ve-ind-header-right p {
-    font-size: 14px;
-    line-height: 1.75;
-    margin-bottom: 14px;
-  }
-
-  .ve-ind-grid {
-    grid-template-columns: 1fr;
-    gap: 17px;
-  }
-
-  .ve-ind-card {
-    height: 330px;
-  }
-
-  .ve-ind-card-text h3 {
-    font-size: 22px;
-  }
-
-  .ve-ind-footer {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 12px;
-  }
-}
-
-/* SMALL MOBILE */
-
-@media (max-width: 380px) {
-  .ve-ind-card {
-    height: 315px;
-  }
-
-  .ve-ind-card-content {
-    padding: 20px;
-  }
-
-  .ve-ind-card-text h3 {
-    font-size: 20px;
-  }
-}
-
-/* ACCESSIBILITY */
-
-@media (prefers-reduced-motion: reduce) {
-  .ve-industries *,
-  .ve-industries *::before,
-  .ve-industries *::after {
-    transition: none !important;
-    animation: none !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-
-
 /* ===========================================
    VECTOR ENGINEERS - PRODUCT SHOWCASE
    Design based on approved reference
@@ -1480,4 +1019,3619 @@
     transform: none !important;
   }
 
+}
+
+
+
+/* ===========================================
+   VECTOR ENGINEERS - ABOUT PAGE BANNER
+=========================================== */
+
+.ve-about-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  min-height: 380px;
+
+  padding: 65px 0 !important;
+
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Dark overlay */
+
+.ve-about-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(7, 31, 55, 0.94) 0%,
+    rgba(7, 31, 55, 0.78) 45%,
+    rgba(7, 31, 55, 0.28) 100%
+  );
+}
+
+/* Content position */
+
+.ve-about-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+.ve-about-banner .breadcrumb-inner {
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: left;
+}
+
+.ve-about-banner .section-title {
+  max-width: 760px;
+  text-align: left;
+}
+
+/* Subtitle */
+
+.ve-about-banner-subtitle {
+  color: #74caff !important;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin: 0 0 15px;
+
+  animation: veAboutFadeUp 0.7s ease both;
+}
+
+/* Main title */
+
+.ve-about-banner .page-title {
+  color: #ffffff !important;
+  font-size: clamp(34px, 3.8vw, 55px);
+  font-weight: 750;
+  line-height: 1.17;
+  letter-spacing: -1px;
+
+  margin: 0 0 17px !important;
+  padding: 0;
+
+  animation: veAboutFadeUp 0.8s ease 0.1s both;
+}
+
+.ve-about-banner .page-title span {
+  color: #62c3ff;
+}
+
+/* Description */
+
+.ve-about-banner-description {
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 15px;
+  line-height: 1.75;
+
+  margin: 0 0 23px;
+
+  animation: veAboutFadeUp 0.8s ease 0.2s both;
+}
+
+/* Breadcrumb */
+
+.ve-about-banner .page-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  list-style: none;
+
+  animation: veAboutFadeUp 0.8s ease 0.3s both;
+}
+
+.ve-about-banner .page-list li {
+  display: inline-flex;
+  align-items: center;
+
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Breadcrumb separator */
+
+.ve-about-banner .page-list li + li::before {
+  content: "/";
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.ve-about-banner .page-list li a {
+  color: #a9ddff !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.ve-about-banner .page-list li a:hover {
+  color: #ffffff !important;
+}
+
+/* Smooth entrance animation */
+
+@keyframes veAboutFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================================
+   LARGE DESKTOP
+=========================================== */
+
+@media (min-width: 1600px) {
+  .ve-about-banner {
+    min-height: 420px;
+  }
+}
+
+/* ===========================================
+   LAPTOP
+=========================================== */
+
+@media (min-width: 992px) and (max-width: 1599px) {
+  .ve-about-banner {
+    min-height: 360px;
+    padding: 55px 0 !important;
+  }
+
+  .ve-about-banner .page-title {
+    font-size: clamp(38px, 3.6vw, 50px);
+  }
+}
+
+/* ===========================================
+   TABLET
+=========================================== */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .ve-about-banner {
+    min-height: 340px;
+    padding: 50px 0 !important;
+  }
+
+  .ve-about-banner .page-title {
+    font-size: 40px;
+  }
+}
+
+/* ===========================================
+   MOBILE
+=========================================== */
+
+@media (max-width: 767px) {
+  .ve-about-banner {
+    min-height: 320px;
+    padding: 45px 0 !important;
+    background-position: 65% center !important;
+  }
+
+  .ve-about-banner .page-title {
+    font-size: clamp(30px, 7vw, 38px);
+    letter-spacing: -0.5px;
+  }
+
+  .ve-about-banner-description {
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .ve-about-banner-subtitle {
+    font-size: 11px;
+    letter-spacing: 1.8px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .ve-about-banner *,
+  .ve-about-banner *::before,
+  .ve-about-banner *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+
+/* =========================================
+   VECTOR ENGINEERS - ABOUT WHO WE ARE
+========================================= */
+
+.ve-about-company {
+  padding: 90px 0 100px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.ve-about-company *,
+.ve-about-company *::before,
+.ve-about-company *::after {
+  box-sizing: border-box;
+}
+
+/* LEFT PHOTOGRAPHS */
+
+.ve-about-company-visual {
+  position: relative;
+  max-width: 570px;
+  min-height: 570px;
+  padding: 0 65px 55px 0;
+
+  animation: veAboutImageIn 0.85s ease both;
+}
+
+.ve-about-main-photo {
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  background: #e8eef3;
+}
+
+.ve-about-main-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.ve-about-main-photo:hover img {
+  transform: scale(1.04);
+}
+
+/* OVERLAPPING IMAGE */
+
+.ve-about-secondary-photo {
+  position: absolute;
+  right: 5px;
+  bottom: 25px;
+  z-index: 2;
+
+  width: 215px;
+  height: 220px;
+  padding: 7px;
+
+  background: #ffffff;
+  box-shadow: 0 15px 35px rgba(16,47,80,0.13);
+}
+
+.ve-about-secondary-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* IMAGE HIGHLIGHT */
+
+.ve-about-visual-label {
+  position: absolute;
+  left: 0;
+  bottom: 25px;
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px 20px;
+
+  background: #102f50;
+}
+
+.ve-about-label-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+
+  color: #ffffff;
+  font-size: 20px;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.ve-about-visual-label strong {
+  display: block;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ve-about-visual-label small {
+  display: block;
+  color: #c6d6e4;
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+/* RIGHT CONTENT */
+
+.ve-about-company-content {
+  padding-left: 30px;
+  animation: veAboutContentIn 0.9s ease both;
+}
+
+.ve-about-section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 17px;
+
+  color: #0879c4;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.ve-about-section-label span {
+  width: 28px;
+  height: 2px;
+  background: #0879c4;
+}
+
+.ve-about-company-content h2 {
+  margin: 0 0 24px;
+
+  color: #102f50;
+  font-size: clamp(32px, 3vw, 46px);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.ve-about-company-content h2 span {
+  color: #0879c4;
+}
+
+.ve-about-intro {
+  color: #293f52;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.ve-about-description {
+  color: #5e6d7c;
+  font-size: 14px;
+  line-height: 1.85;
+  margin-bottom: 14px;
+}
+
+/* STRENGTHS */
+
+.ve-about-strengths {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 18px;
+
+  padding: 24px 0;
+  margin: 25px 0;
+
+  border-top: 1px solid #e6edf3;
+  border-bottom: 1px solid #e6edf3;
+}
+
+.ve-about-strength {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+}
+
+.ve-about-strength-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 35px;
+  height: 35px;
+
+  background: #e9f5fc;
+  color: #0879c4;
+  font-size: 14px;
+}
+
+.ve-about-strength h4 {
+  color: #102f50;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 5px;
+  line-height: 1.4;
+}
+
+.ve-about-strength p {
+  color: #71808e;
+  font-size: 11.5px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* COMMITMENT LINE */
+
+.ve-about-commitment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #263f56;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 23px;
+}
+
+.ve-about-commitment svg {
+  flex-shrink: 0;
+  color: #0879c4;
+}
+
+/* BUTTON */
+
+.ve-about-company-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+
+  min-height: 48px;
+  padding: 14px 24px;
+
+  background: #0879c4;
+  color: #ffffff !important;
+
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none !important;
+
+  transition:
+    background-color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.ve-about-company-btn:hover {
+  background: #102f50;
+  transform: translateY(-3px);
+}
+
+.ve-about-company-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.ve-about-company-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* ENTRANCE ANIMATIONS */
+
+@keyframes veAboutImageIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes veAboutContentIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+  .ve-about-company {
+    padding: 65px 0;
+  }
+
+  .ve-about-company-visual {
+    margin: 0 auto;
+  }
+
+  .ve-about-company-content {
+    padding-left: 0;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+  .ve-about-company {
+    padding: 50px 0;
+  }
+
+  .ve-about-company-visual {
+    min-height: 420px;
+    padding-right: 40px;
+    padding-bottom: 45px;
+  }
+
+  .ve-about-main-photo {
+    height: 360px;
+  }
+
+  .ve-about-secondary-photo {
+    width: 140px;
+    height: 145px;
+    right: 0;
+    bottom: 5px;
+  }
+
+  .ve-about-visual-label {
+    bottom: 5px;
+    padding: 12px;
+    gap: 9px;
+  }
+
+  .ve-about-label-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .ve-about-visual-label strong {
+    font-size: 11px;
+  }
+
+  .ve-about-visual-label small {
+    font-size: 9px;
+  }
+
+  .ve-about-company-content h2 {
+    font-size: 32px;
+  }
+
+  .ve-about-strengths {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .ve-about-intro {
+    font-size: 15px;
+  }
+
+  .ve-about-description {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ve-about-company-visual,
+  .ve-about-company-content {
+    animation: none;
+  }
+
+  .ve-about-company * {
+    transition: none !important;
+  }
+}
+
+
+
+
+
+/* =============================================
+   VECTOR ENGINEERS
+   ABOUT - VISION & MISSION SECTION
+============================================= */
+
+.ve-purpose-section {
+  background: #f5f7f9;
+  padding: 100px 0 105px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ve-purpose-section *,
+.ve-purpose-section *::before,
+.ve-purpose-section *::after {
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------
+   SECTION INTRODUCTION
+--------------------------------------------- */
+
+.ve-purpose-heading {
+  margin-bottom: 43px;
+}
+
+.ve-purpose-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 16px;
+
+  color: #0879c4;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+.ve-purpose-label-line {
+  display: block;
+  width: 30px;
+  height: 2px;
+  flex-shrink: 0;
+  background: #0879c4;
+}
+
+.ve-purpose-heading h2 {
+  color: #102f50;
+  font-size: clamp(32px, 3.2vw, 46px);
+  font-weight: 750;
+  letter-spacing: -1.1px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.ve-purpose-heading h2 span {
+  color: #0879c4;
+}
+
+.ve-purpose-intro {
+  max-width: 440px;
+  margin: 0 0 5px auto;
+
+  color: #647484;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ---------------------------------------------
+   MAIN TWO COLUMN COMPOSITION
+--------------------------------------------- */
+
+.ve-purpose-main {
+  min-height: 470px;
+  background: #ffffff;
+  box-shadow: 0 16px 50px rgba(15, 45, 70, 0.065);
+}
+
+/* PHOTO */
+
+.ve-purpose-visual {
+  height: 100%;
+  min-height: 470px;
+  position: relative;
+  overflow: hidden;
+  background: #dce6ec;
+}
+
+.ve-purpose-visual > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 470px;
+
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.9s cubic-bezier(
+    0.22, 1, 0.36, 1
+  );
+}
+
+.ve-purpose-visual:hover > img {
+  transform: scale(1.035);
+}
+
+/* PHOTO OVERLAY */
+
+.ve-purpose-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 35%,
+    rgba(5, 27, 47, 0.85) 100%
+  );
+  pointer-events: none;
+}
+
+.ve-purpose-photo-overlay {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 35px 38px;
+}
+
+.ve-purpose-photo-line {
+  display: block;
+  width: 45px;
+  height: 3px;
+  margin-bottom: 17px;
+  background: #39aaf0;
+}
+
+.ve-purpose-photo-overlay p {
+  max-width: 320px;
+  margin: 0;
+
+  color: #ffffff !important;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+/* ---------------------------------------------
+   RIGHT WHITE CONTENT AREA
+--------------------------------------------- */
+
+.ve-purpose-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100%;
+  min-height: 470px;
+
+  padding: 45px 55px;
+}
+
+.ve-purpose-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* LARGE SECTION NUMBER */
+
+.ve-purpose-number {
+  flex-shrink: 0;
+  min-width: 52px;
+
+  color: #d9e9f4;
+  font-size: 55px;
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1;
+
+  transition: color 0.4s ease;
+}
+
+.ve-purpose-item:hover .ve-purpose-number {
+  color: #9bcceb;
+}
+
+.ve-purpose-item-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.ve-purpose-item-label {
+  display: block;
+  margin-bottom: 10px;
+
+  color: #0879c4;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.8px;
+}
+
+.ve-purpose-item h3 {
+  margin: 0 0 13px;
+
+  color: #102f50;
+  font-size: 27px;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.ve-purpose-item p {
+  max-width: 520px;
+  margin: 0;
+
+  color: #657584;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* CONTENT DIVIDER */
+
+.ve-purpose-item-divider {
+  width: 100%;
+  height: 1px;
+  margin: 32px 0;
+  background: #e5ebf0;
+}
+
+/* ---------------------------------------------
+   BOTTOM CORPORATE STRIP
+--------------------------------------------- */
+
+.ve-purpose-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  min-height: 100px;
+  padding: 25px 40px;
+
+  background: #102f50;
+}
+
+.ve-purpose-bottom-content > span {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #76caff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.ve-purpose-bottom-content h4 {
+  margin: 0;
+
+  color: #ffffff;
+  font-size: clamp(16px, 1.7vw, 22px);
+  font-weight: 650;
+  line-height: 1.45;
+}
+
+.ve-purpose-bottom-content h4 span {
+  color: #7ccaff;
+}
+
+.ve-purpose-bottom-mark {
+  flex-shrink: 0;
+
+  color: rgba(255,255,255,0.13);
+  font-size: 62px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -5px;
+
+  user-select: none;
+}
+
+/* ---------------------------------------------
+   DESKTOP / SMALL LAPTOP
+--------------------------------------------- */
+
+@media (max-width: 1199px) {
+  .ve-purpose-content {
+    padding: 40px 35px;
+  }
+
+  .ve-purpose-item {
+    gap: 17px;
+  }
+
+  .ve-purpose-item p {
+    font-size: 13px;
+  }
+}
+
+/* ---------------------------------------------
+   TABLET
+--------------------------------------------- */
+
+@media (max-width: 991px) {
+  .ve-purpose-section {
+    padding: 75px 0;
+  }
+
+  .ve-purpose-intro {
+    max-width: 100%;
+    margin: 18px 0 0;
+  }
+
+  .ve-purpose-visual,
+  .ve-purpose-visual > img {
+    min-height: 380px;
+  }
+
+  .ve-purpose-visual {
+    height: 380px;
+  }
+
+  .ve-purpose-content {
+    min-height: auto;
+    padding: 45px;
+  }
+}
+
+/* ---------------------------------------------
+   MOBILE
+--------------------------------------------- */
+
+@media (max-width: 767px) {
+  .ve-purpose-section {
+    padding: 55px 0 60px;
+  }
+
+  .ve-purpose-heading {
+    margin-bottom: 28px;
+  }
+
+  .ve-purpose-heading h2 {
+    font-size: 32px;
+    letter-spacing: -0.5px;
+  }
+
+  .ve-purpose-intro {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .ve-purpose-visual {
+    height: 290px;
+    min-height: 290px;
+  }
+
+  .ve-purpose-visual > img {
+    height: 100%;
+    min-height: 290px;
+  }
+
+  .ve-purpose-photo-overlay {
+    padding: 25px;
+  }
+
+  .ve-purpose-photo-overlay p {
+    font-size: 17px;
+  }
+
+  .ve-purpose-content {
+    padding: 35px 22px;
+  }
+
+  .ve-purpose-item {
+    gap: 15px;
+  }
+
+  .ve-purpose-number {
+    min-width: 36px;
+    font-size: 38px;
+    letter-spacing: -2px;
+  }
+
+  .ve-purpose-item h3 {
+    font-size: 23px;
+  }
+
+  .ve-purpose-item p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .ve-purpose-item-divider {
+    margin: 25px 0;
+  }
+
+  .ve-purpose-bottom {
+    padding: 22px 25px;
+    min-height: 90px;
+  }
+
+  .ve-purpose-bottom-mark {
+    display: none;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+  .ve-purpose-section *,
+  .ve-purpose-section *::before,
+  .ve-purpose-section *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+
+
+
+
+/* ==========================================
+   VECTOR ENGINEERS - CONTACT PAGE
+========================================== */
+
+.ve-contact-banner,
+.ve-contact-intro-section,
+.ve-contact-enquiry-section,
+.ve-contact-location-section {
+  --ve-primary: #0879c4;
+  --ve-navy: #102f50;
+  --ve-text: #637383;
+}
+
+.ve-contact-banner *,
+.ve-contact-intro-section *,
+.ve-contact-enquiry-section *,
+.ve-contact-location-section * {
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   BANNER
+========================================== */
+
+.ve-contact-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 365px;
+  padding: 65px 0;
+  background-color: #102f50;
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+}
+
+.ve-contact-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(7, 28, 49, 0.82);
+}
+
+.ve-contact-banner-content {
+  max-width: 730px;
+}
+
+.ve-contact-banner-label {
+  display: block;
+  margin-bottom: 16px;
+  color: #79caff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.ve-contact-banner h1 {
+  margin: 0 0 19px;
+  color: #fff;
+  font-size: clamp(34px, 3.8vw, 54px);
+  font-weight: 750;
+  line-height: 1.18;
+  letter-spacing: -1px;
+}
+
+.ve-contact-banner h1 span {
+  color: #78c9ff;
+}
+
+.ve-contact-banner-content > p {
+  max-width: 610px;
+  margin-bottom: 23px;
+  color: #e1eaf1;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.ve-contact-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.ve-contact-breadcrumb li {
+  color: #fff;
+  font-size: 13px;
+}
+
+.ve-contact-breadcrumb li + li::before {
+  content: "/";
+  margin-right: 12px;
+  color: #a8c5d9;
+}
+
+.ve-contact-breadcrumb a {
+  color: #a8dfff;
+  text-decoration: none;
+}
+
+/* ==========================================
+   INTRO SECTION
+========================================== */
+
+.ve-contact-intro-section {
+  padding: 80px 0 75px;
+  background: #fff;
+}
+
+.ve-contact-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 17px;
+  color: #0879c4;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.ve-contact-eyebrow span {
+  width: 30px;
+  height: 2px;
+  background: #0879c4;
+}
+
+.ve-contact-section-title {
+  max-width: 750px;
+  margin: 0;
+  color: #102f50;
+  font-size: clamp(30px, 3vw, 44px);
+  font-weight: 750;
+  letter-spacing: -1px;
+  line-height: 1.25;
+}
+
+.ve-contact-section-title span {
+  color: #0879c4;
+}
+
+.ve-contact-intro-text {
+  margin: 0;
+  color: #637383;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.ve-contact-info-row {
+  margin-top: 45px;
+  padding-top: 35px;
+  border-top: 1px solid #e3eaf0;
+}
+
+/* CONTACT DETAILS - NO GENERIC CARDS */
+
+.ve-contact-info-item {
+  display: flex;
+  gap: 17px;
+  height: 100%;
+  padding-right: 18px;
+}
+
+.ve-contact-info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  background: #eaf5fd;
+  color: #0879c4;
+  font-size: 18px;
+}
+
+.ve-contact-info-label {
+  display: block;
+  margin-bottom: 9px;
+  color: #0879c4;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 1.5px;
+}
+
+.ve-contact-info-item h3 {
+  margin-bottom: 12px;
+  color: #102f50;
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.ve-contact-info-item p {
+  max-width: 315px;
+  margin-bottom: 14px;
+  color: #657585;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.ve-contact-info-item a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #0879c4;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+.ve-contact-info-item a:hover {
+  color: #102f50;
+}
+
+.ve-contact-info-item .ve-contact-phone {
+  display: block;
+  width: fit-content;
+  margin-bottom: 7px;
+  font-size: 14px;
+}
+
+/* ==========================================
+   ENQUIRY SECTION
+========================================== */
+
+.ve-contact-enquiry-section {
+  padding: 0 0 90px;
+  background: #fff;
+}
+
+.ve-contact-enquiry-layout {
+  background: #f7f9fb;
+  border: 1px solid #e5ebf0;
+}
+
+/* LEFT PHOTO */
+
+.ve-contact-enquiry-visual {
+  position: relative;
+  min-height: 620px;
+  height: 100%;
+  overflow: hidden;
+  background: #153c5b;
+}
+
+.ve-contact-enquiry-visual > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  transition: transform .9s ease;
+}
+
+.ve-contact-enquiry-visual:hover > img {
+  transform: scale(1.035);
+}
+
+.ve-contact-enquiry-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 31, 52, .72);
+}
+
+.ve-contact-enquiry-visual-content {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 48px 38px;
+}
+
+.ve-contact-image-label {
+  display: block;
+  margin-bottom: 18px;
+  color: #89cfff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+}
+
+.ve-contact-enquiry-visual-content h2 {
+  max-width: 410px;
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: clamp(28px, 2.7vw, 39px);
+  line-height: 1.25;
+  font-weight: 750;
+}
+
+.ve-contact-enquiry-visual-content p {
+  max-width: 390px;
+  color: #e0eaf2;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.ve-contact-visual-line {
+  width: 50px;
+  height: 3px;
+  margin: 24px 0;
+  background: #54b7fa;
+}
+
+.ve-contact-visual-points {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.ve-contact-visual-points span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.ve-contact-visual-points svg {
+  color: #70c7ff;
+}
+
+/* FORM PANEL */
+
+.ve-contact-form-panel {
+  height: 100%;
+  padding: 52px 55px;
+  background: #f7f9fb;
+}
+
+.ve-contact-form-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #0879c4;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1.6px;
+}
+
+.ve-contact-form-panel h2 {
+  margin: 0 0 13px;
+  color: #102f50;
+  font-size: clamp(27px, 2.6vw, 35px);
+  font-weight: 750;
+}
+
+.ve-contact-form-description {
+  max-width: 520px;
+  margin-bottom: 27px;
+  color: #667585;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.ve-contact-form-panel label {
+  display: block;
+  margin-bottom: 8px;
+  color: #263e53;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ve-contact-form-panel input,
+.ve-contact-form-panel select,
+.ve-contact-form-panel textarea {
+  display: block;
+  width: 100%;
+  min-height: 47px;
+  padding: 12px 14px;
+  border: 1px solid #dce4eb;
+  border-radius: 3px;
+  background: #fff;
+  color: #102f50;
+  font-size: 13px;
+  outline: none;
+  transition:
+    border-color .3s ease,
+    box-shadow .3s ease;
+}
+
+.ve-contact-form-panel textarea {
+  min-height: 135px;
+  resize: vertical;
+}
+
+.ve-contact-form-panel input:focus,
+.ve-contact-form-panel select:focus,
+.ve-contact-form-panel textarea:focus {
+  border-color: #0879c4;
+  box-shadow: 0 0 0 3px rgba(8, 121, 196, .08);
+}
+
+.ve-contact-form-panel input::placeholder,
+.ve-contact-form-panel textarea::placeholder {
+  color: #9daab7;
+}
+
+.ve-contact-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  min-height: 48px;
+  padding: 14px 25px;
+  border: 1px solid #0879c4;
+  background: #0879c4;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color .3s ease,
+    transform .3s ease;
+}
+
+.ve-contact-submit-btn:hover {
+  background: #102f50;
+  border-color: #102f50;
+  transform: translateY(-2px);
+}
+
+.ve-contact-form-note {
+  margin: 12px 0 0;
+  color: #81909e;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+/* ==========================================
+   LOCATION & MAP
+========================================== */
+
+.ve-contact-location-section {
+  padding: 70px 0 0;
+  background: #f4f7fa;
+}
+
+.ve-contact-location-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.ve-contact-location-heading h2 {
+  margin: 0 0 12px;
+  color: #102f50;
+  font-size: clamp(29px, 3vw, 40px);
+  font-weight: 750;
+}
+
+.ve-contact-location-heading h2 span {
+  color: #0879c4;
+}
+
+.ve-contact-location-heading p {
+  margin: 0;
+  color: #657585;
+  font-size: 14px;
+}
+
+.ve-contact-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  color: #0879c4;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+.ve-contact-map-link:hover {
+  color: #102f50;
+}
+
+.ve-contact-map {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  background: #e4eaf0;
+}
+
+.ve-contact-map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 991px) {
+  .ve-contact-intro-section {
+    padding: 60px 0;
+  }
+
+  .ve-contact-form-panel {
+    padding: 40px 35px;
+  }
+
+  .ve-contact-enquiry-visual {
+    min-height: 400px;
+  }
+
+  .ve-contact-location-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .ve-contact-banner {
+    min-height: 330px;
+    padding: 55px 0;
+  }
+
+  .ve-contact-banner h1 {
+    font-size: 33px;
+  }
+
+  .ve-contact-banner-content > p {
+    font-size: 13px;
+  }
+
+  .ve-contact-intro-section {
+    padding: 50px 0;
+  }
+
+  .ve-contact-section-title {
+    font-size: 30px;
+  }
+
+  .ve-contact-info-row {
+    margin-top: 30px;
+    padding-top: 25px;
+  }
+
+  .ve-contact-enquiry-section {
+    padding-bottom: 55px;
+  }
+
+  .ve-contact-enquiry-visual {
+    min-height: 350px;
+  }
+
+  .ve-contact-enquiry-visual-content {
+    padding: 30px 25px;
+  }
+
+  .ve-contact-form-panel {
+    padding: 35px 22px;
+  }
+
+  .ve-contact-location-section {
+    padding-top: 55px;
+  }
+
+  .ve-contact-map {
+    height: 310px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ve-contact-banner *,
+  .ve-contact-intro-section *,
+  .ve-contact-enquiry-section *,
+  .ve-contact-location-section * {
+    transition: none !important;
+  }
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   VECTOR ENGINEERS - COMPACT BRANDS GRID
+========================================== */
+
+.ve-compact-brands {
+  padding: 65px 0 75px;
+  background: #f8fafc;
+}
+
+.ve-compact-brands * {
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+.ve-compact-brands-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.ve-compact-brands-head > div > span {
+  display: block;
+  margin-bottom: 9px;
+  color: #0879c4;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.ve-compact-brands-head h2 {
+  margin: 0;
+  color: #102f50;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.ve-compact-brands-head h2 strong {
+  color: #0879c4;
+}
+
+.ve-compact-brands-head > p {
+  max-width: 430px;
+  margin: 0;
+  color: #697889;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* GRID */
+
+.ve-compact-brands-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* BRAND CARD */
+
+.ve-compact-brand-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 155px;
+  background: #fff;
+  border: 1px solid #e3eaf1;
+  border-radius: 5px;
+  overflow: hidden;
+  text-decoration: none !important;
+
+  transition:
+    transform .45s cubic-bezier(.22, 1, .36, 1),
+    box-shadow .45s ease,
+    border-color .35s ease;
+}
+
+/* LOGO */
+
+.ve-compact-brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  min-height: 110px;
+  padding: 18px 25px;
+}
+
+.ve-compact-brand-logo img {
+  display: block;
+  width: 100%;
+  max-width: 165px;
+  height: 70px;
+  object-fit: contain;
+
+  transition:
+    transform .5s cubic-bezier(.22, 1, .36, 1);
+}
+
+/* BRAND NAME */
+
+.ve-compact-brand-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  padding: 10px 15px;
+  border-top: 1px solid #edf1f5;
+}
+
+.ve-compact-brand-name span {
+  color: #102f50;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ve-compact-brand-name svg {
+  flex-shrink: 0;
+  color: #0879c4;
+  font-size: 11px;
+}
+
+/* HOVER */
+
+@media (hover: hover) and (pointer: fine) {
+  .ve-compact-brand-card:hover {
+    transform: translateY(-4px);
+    border-color: #b5d9f2;
+    box-shadow: 0 12px 26px rgba(14, 65, 103, .1);
+  }
+
+  .ve-compact-brand-card:hover img {
+    transform: scale(1.055);
+  }
+}
+
+/* PAGINATION */
+
+.ve-brands-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 36px;
+}
+
+.ve-brands-pagination button {
+  min-width: 38px;
+  min-height: 38px;
+  padding: 8px 13px;
+
+  background: #fff;
+  border: 1px solid #dce7ef;
+  border-radius: 4px;
+
+  color: #102f50;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition:
+    background-color .3s ease,
+    color .3s ease,
+    border-color .3s ease;
+}
+
+.ve-brands-pagination button:hover:not(:disabled),
+.ve-brands-pagination button.active {
+  background: #0879c4;
+  border-color: #0879c4;
+  color: #fff;
+}
+
+.ve-brands-pagination button:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.ve-compact-brand-card:focus-visible,
+.ve-brands-pagination button:focus-visible {
+  outline: 2px solid #0879c4;
+  outline-offset: 3px;
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+  .ve-compact-brands-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ve-compact-brands-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+  .ve-compact-brands {
+    padding: 45px 0 55px;
+  }
+
+  .ve-compact-brands-head h2 {
+    font-size: 28px;
+  }
+
+  .ve-compact-brands-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .ve-compact-brand-card {
+    min-height: 130px;
+  }
+
+  .ve-compact-brand-logo {
+    min-height: 90px;
+    padding: 14px;
+  }
+
+  .ve-compact-brand-logo img {
+    height: 60px;
+  }
+
+  .ve-compact-brand-name {
+    padding: 9px 10px;
+  }
+
+  .ve-compact-brand-name span {
+    font-size: 11px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .ve-compact-brand-card,
+  .ve-compact-brand-logo img {
+    transition: none !important;
+  }
+}
+/* BANNER */
+
+.ve-brands-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 350px;
+  padding: 65px 0;
+  background-color: #102f50;
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+}
+
+.ve-brands-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 28, 49, 0.82);
+  z-index: -1;
+}
+
+.ve-brands-banner-inner {
+  max-width: 760px;
+}
+
+.ve-brands-banner-tag {
+  display: inline-block;
+  color: #7acaff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.ve-brands-banner h1 {
+  color: #fff;
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.17;
+  letter-spacing: -1px;
+  font-weight: 750;
+  margin: 0 0 20px;
+}
+
+.ve-brands-banner h1 span {
+  color: #78c9ff;
+}
+
+.ve-brands-banner-inner > p {
+  max-width: 620px;
+  margin-bottom: 23px;
+  color: #e0eaf3;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* BREADCRUMB */
+
+.ve-brands-breadcrumb {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ve-brands-breadcrumb li {
+  color: #fff;
+  font-size: 13px;
+}
+
+.ve-brands-breadcrumb li + li::before {
+  content: "/";
+  color: #9bb8cc;
+  margin-right: 12px;
+}
+
+.ve-brands-breadcrumb a {
+  color: #9cdaff;
+  text-decoration: none;
+}
+
+
+
+
+
+
+/* ===========================================
+   VECTOR ENGINEERS - HOME ABOUT SECTION
+   INDUSTRIAL CORPORATE DESIGN
+=========================================== */
+
+.ve-home-about {
+  --ve-about-blue: #0879c4;
+  --ve-about-navy: #102f50;
+  --ve-about-text: #657483;
+
+  position: relative;
+  width: 100%;
+  padding: 25px 0 0px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.ve-home-about *,
+.ve-home-about *::before,
+.ve-home-about *::after {
+  box-sizing: border-box;
+}
+
+/* ===========================================
+   LEFT PHOTOGRAPH
+=========================================== */
+
+.ve-home-about-visual {
+  position: relative;
+  max-width: 550px;
+  padding: 0 36px 39px 0;
+}
+
+.ve-home-about-image {
+  position: relative;
+  height: 525px;
+  overflow: hidden;
+  background: #dce4ea;
+}
+
+.ve-home-about-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 1s cubic-bezier(
+      0.22, 1, 0.36, 1
+    );
+}
+
+.ve-home-about-image:hover img {
+  transform: scale(1.035);
+}
+
+/* SUBTLE BLUE IMAGE ACCENT */
+
+.ve-home-about-image-accent {
+  position: absolute;
+  right: 0;
+  top: 38px;
+  width: 6px;
+  height: 105px;
+  background: #0879c4;
+}
+
+/* PHOTO CAPTION */
+
+.ve-home-about-photo-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  width: min(87%, 385px);
+  min-height: 112px;
+  padding: 24px 27px;
+
+  background: #102f50;
+  box-shadow: 0 12px 30px
+    rgba(16, 47, 80, 0.1);
+}
+
+.ve-home-about-caption-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid rgba(255,255,255,0.23);
+  color: #8ad4ff;
+  font-size: 19px;
+}
+
+.ve-home-about-photo-caption span {
+  display: block;
+  margin-bottom: 6px;
+  color: #88d1ff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.ve-home-about-photo-caption p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.55;
+}
+
+/* ===========================================
+   RIGHT CONTENT
+=========================================== */
+
+.ve-home-about-content {
+  padding-left: 28px;
+}
+
+.ve-home-about-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 18px;
+  color: #0879c4;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.ve-home-about-eyebrow > span {
+  width: 30px;
+  height: 2px;
+  flex: 0 0 30px;
+  background: #0879c4;
+}
+
+/* MAIN HEADING */
+
+.ve-home-about-title {
+  max-width: 640px;
+  margin: 0 0 23px;
+
+  color: #102f50;
+  font-size: clamp(31px, 3vw, 45px);
+  font-weight: 750;
+  letter-spacing: -1.1px;
+  line-height: 1.2;
+}
+
+.ve-home-about-title span {
+  display: inline;
+  color: #0879c4;
+}
+
+/* INTRO TEXT */
+
+.ve-home-about-lead {
+  margin: 0 0 14px;
+  color: #263e52;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.ve-home-about-description {
+  margin: 0 0 14px;
+  color: #657483;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+/* ===========================================
+   HIGHLIGHTS
+=========================================== */
+
+.ve-home-about-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px 19px;
+
+  margin: 27px 0 28px;
+  padding: 26px 0;
+
+  border-top: 1px solid #e5ecf2;
+  border-bottom: 1px solid #e5ecf2;
+}
+
+.ve-home-about-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  min-width: 0;
+  color: #253f54;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.ve-home-about-check {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 22px;
+
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+
+  border: 1px solid #c5e2f5;
+  background: #edf7fe;
+  color: #0879c4;
+  font-size: 10px;
+}
+
+/* ===========================================
+   BUTTON & FOOTER TEXT
+=========================================== */
+
+.ve-home-about-action {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 26px;
+}
+
+.ve-home-about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+
+  min-height: 49px;
+  padding: 14px 23px;
+
+  background: #0879c4;
+  border: 1px solid #0879c4;
+  color: #ffffff !important;
+
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none !important;
+
+  transition:
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.ve-home-about-button:hover {
+  background: #102f50;
+  border-color: #102f50;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+.ve-home-about-button svg {
+  transition: transform 0.3s ease;
+}
+
+.ve-home-about-button:hover svg {
+  transform: translateX(5px);
+}
+
+.ve-home-about-action-text {
+  padding-left: 18px;
+  border-left: 2px solid #d6e8f5;
+  color: #617184;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+/* ===========================================
+   SCROLL REVEAL ANIMATIONS
+=========================================== */
+
+.ve-home-about-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(
+      0.22, 1, 0.36, 1
+    );
+}
+
+.ve-home-about-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ve-home-about-content
+.ve-home-about-reveal:nth-child(2) {
+  transition-delay: 0.08s;
+}
+
+.ve-home-about-content
+.ve-home-about-reveal:nth-child(3) {
+  transition-delay: 0.14s;
+}
+
+.ve-home-about-content
+.ve-home-about-reveal:nth-child(4) {
+  transition-delay: 0.18s;
+}
+
+.ve-home-about-content
+.ve-home-about-reveal:nth-child(5) {
+  transition-delay: 0.22s;
+}
+
+/* ===========================================
+   RESPONSIVE - LAPTOP
+=========================================== */
+
+@media (max-width: 1199px) {
+  .ve-home-about {
+    padding: 75px 0;
+  }
+
+  .ve-home-about-content {
+    padding-left: 5px;
+  }
+
+  .ve-home-about-image {
+    height: 485px;
+  }
+
+  .ve-home-about-title {
+    font-size: 37px;
+  }
+
+  .ve-home-about-highlights {
+    gap: 14px;
+  }
+}
+
+/* ===========================================
+   RESPONSIVE - TABLET
+=========================================== */
+
+@media (max-width: 991px) {
+  .ve-home-about {
+    padding: 65px 0 75px;
+  }
+
+  .ve-home-about-visual {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .ve-home-about-image {
+    height: 480px;
+  }
+
+  .ve-home-about-content {
+    max-width: 700px;
+    padding-left: 0;
+    margin: 0 auto;
+  }
+}
+
+/* ===========================================
+   RESPONSIVE - MOBILE
+=========================================== */
+
+@media (max-width: 767px) {
+  .ve-home-about {
+    padding: 50px 0 60px;
+  }
+
+  .ve-home-about-visual {
+    padding-right: 22px;
+    padding-bottom: 31px;
+  }
+
+  .ve-home-about-image {
+    height: 345px;
+  }
+
+  .ve-home-about-photo-caption {
+    width: min(88%, 340px);
+    min-height: 88px;
+    padding: 16px 17px;
+    gap: 12px;
+  }
+
+  .ve-home-about-caption-icon {
+    flex-basis: 38px;
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
+  }
+
+  .ve-home-about-photo-caption span {
+    font-size: 9px;
+  }
+
+  .ve-home-about-photo-caption p {
+    font-size: 12px;
+  }
+
+  .ve-home-about-image-accent {
+    height: 70px;
+    width: 4px;
+  }
+
+  .ve-home-about-title {
+    font-size: 32px;
+    letter-spacing: -0.6px;
+  }
+
+  .ve-home-about-lead {
+    font-size: 15px;
+  }
+
+  .ve-home-about-description {
+    font-size: 13px;
+  }
+
+  .ve-home-about-highlights {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 22px 0;
+    margin: 23px 0;
+  }
+
+  .ve-home-about-action {
+    gap: 19px;
+  }
+}
+
+/* ===========================================
+   ACCESSIBILITY
+=========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .ve-home-about-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .ve-home-about *,
+  .ve-home-about *::before,
+  .ve-home-about *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+
+
+
+/* ==========================================
+   VECTOR ENGINEERS - CLIENT LOGO SECTION
+========================================== */
+
+.ve-clients-section {
+  background: #f7f9fc;
+  padding-top: 75px;
+  padding-bottom: 80px;
+}
+
+.ve-clients-section .section-title {
+  margin-bottom: 35px;
+}
+
+.ve-clients-section .section-title .title {
+  color: #102f50;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.25;
+}
+
+.ve-clients-section .section-title .content {
+  max-width: 680px;
+  margin: 15px auto 0;
+  font-size: 14px;
+  line-height: 1.85;
+  color: #687888;
+}
+
+/* SLIDER */
+
+.ve-clients-slider .slick-list {
+  margin: 0 -9px;
+}
+
+.ve-clients-slider .slick-slide {
+  padding: 8px 9px 15px;
+}
+
+/* CLIENT LOGO */
+
+.ve-clients-slider .ve-client-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 120px;
+  padding: 20px;
+
+  background: #ffffff;
+  border: 1px solid #e6edf3;
+  border-radius: 5px;
+
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+.ve-clients-slider .ve-client-logo img {
+  display: block;
+  width: 100%;
+  max-width: 145px;
+  height: 75px;
+
+  object-fit: contain;
+  object-position: center;
+
+  transition: transform 0.45s ease;
+}
+
+.ve-clients-slider .ve-client-logo:hover {
+  border-color: #b9d8ed;
+  box-shadow: 0 9px 24px rgba(16, 47, 80, 0.08);
+  transform: translateY(-3px);
+}
+
+.ve-clients-slider .ve-client-logo:hover img {
+  transform: scale(1.05);
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+  .ve-clients-section {
+    padding-top: 50px;
+    padding-bottom: 55px;
+  }
+
+  .ve-clients-slider .ve-client-logo {
+    height: 105px;
+    padding: 15px;
+  }
+
+  .ve-clients-slider .ve-client-logo img {
+    height: 65px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ve-clients-slider *,
+  .ve-clients-slider *::before,
+  .ve-clients-slider *::after {
+    transition: none !important;
+  }
+}
+
+
+
+
+/* ==========================================
+   VECTOR ENGINEERS - FOOTER ENHANCEMENTS
+========================================== */
+
+/* CONTACT INFORMATION */
+
+.ve-footer-contact .ve-footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 25px;
+}
+
+.ve-footer-contact .ve-footer-contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+
+  background: rgba(8, 121, 196, 0.18);
+  color: #65c3ff;
+  font-size: 16px;
+
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+.ve-footer-contact-item:hover
+.ve-footer-contact-icon {
+  background: #0879c4;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.ve-footer-contact-item h5 {
+  color: #ffffff !important;
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ve-footer-contact-item a {
+  display: block;
+  width: fit-content;
+  color: #b7c9d9 !important;
+  font-size: 13px;
+  line-height: 1.85;
+  overflow-wrap: anywhere;
+  text-decoration: none !important;
+  transition: color 0.3s ease;
+}
+
+.ve-footer-contact-item a:hover {
+  color: #70c8ff !important;
+}
+
+/* ==========================================
+   SOCIAL MEDIA ICONS
+========================================== */
+
+.ve-footer-social-block {
+  padding-top: 6px;
+}
+
+.ve-footer-social-block h5 {
+  margin: 0 0 15px;
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ve-footer-social-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ve-footer-social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 39px;
+  height: 39px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 5px;
+
+  background: rgba(255, 255, 255, 0.04);
+  color: #d3e1ee !important;
+  font-size: 15px;
+
+  text-decoration: none !important;
+
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease,
+    color 0.4s ease,
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+a.ve-footer-social-icon:hover {
+  background: #0879c4;
+  border-color: #0879c4;
+  color: #ffffff !important;
+  transform: translateY(-4px);
+}
+
+.ve-social-inactive {
+  opacity: 0.55;
+  cursor: default;
+}
+
+/* ==========================================
+   SCROLL REVEAL ANIMATION
+========================================== */
+
+.ve-footer-visible .ve-footer-reveal {
+  animation: veFooterReveal 0.8s
+    cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.ve-footer-visible .col-xl-4:nth-child(1)
+.ve-footer-reveal {
+  animation-delay: 0.05s;
+}
+
+.ve-footer-visible .col-xl-2:nth-child(2)
+.ve-footer-reveal {
+  animation-delay: 0.12s;
+}
+
+.ve-footer-visible .col-xl-3:nth-child(3)
+.ve-footer-reveal {
+  animation-delay: 0.19s;
+}
+
+.ve-footer-visible .col-xl-3:nth-child(4)
+.ve-footer-reveal {
+  animation-delay: 0.26s;
+}
+
+@keyframes veFooterReveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================
+   FLOATING WHATSAPP BUTTON
+========================================== */
+
+.ve-floating-whatsapp {
+  position: fixed !important;
+  right: 25px;
+  bottom: 100px;
+  z-index: 9998;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+  background: #25d366;
+
+  color: #ffffff !important;
+  font-size: 29px;
+  text-decoration: none !important;
+
+  box-shadow:
+    0 6px 22px rgba(37, 211, 102, 0.3);
+
+  transition:
+    background-color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  animation: veWhatsappFloat 3.5s ease-in-out infinite;
+}
+
+/* WHATSAPP PULSE RING */
+
+.ve-floating-whatsapp::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+
+  border: 2px solid rgba(37, 211, 102, 0.45);
+  border-radius: 50%;
+  pointer-events: none;
+
+  animation: veWhatsappPulse 3s ease-out infinite;
+}
+
+.ve-floating-whatsapp svg {
+  position: relative;
+  z-index: 2;
+}
+
+.ve-floating-whatsapp:hover {
+  background: #1ead55;
+  color: #ffffff !important;
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 10px 26px rgba(37, 211, 102, 0.4);
+
+  animation-play-state: paused;
+}
+
+/* WHATSAPP TOOLTIP */
+
+.ve-whatsapp-tooltip {
+  position: absolute;
+  right: 69px;
+
+  width: max-content;
+  padding: 9px 13px;
+
+  border-radius: 5px;
+  background: #102f50;
+
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(8px);
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+}
+
+.ve-floating-whatsapp:hover
+.ve-whatsapp-tooltip,
+.ve-floating-whatsapp:focus-visible
+.ve-whatsapp-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes veWhatsappFloat {
+  0%, 100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -4px;
+  }
+}
+
+/* PULSE ANIMATION */
+
+@keyframes veWhatsappPulse {
+  0% {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.7;
+  }
+
+  65%, 100% {
+    transform: scale(1.23);
+    opacity: 0;
+  }
+}
+
+/* ==========================================
+   SEPARATE BACK TO TOP BUTTON
+========================================== */
+
+.ve-floating-backtop {
+  position: fixed !important;
+  right: 29px;
+  bottom: 28px;
+  z-index: 9998;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 47px;
+  height: 47px;
+
+  padding: 0;
+  border: 1px solid #0879c4;
+  border-radius: 50%;
+
+  background: #0879c4;
+  color: #ffffff;
+  font-size: 17px;
+
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateY(15px);
+
+  box-shadow:
+    0 5px 17px rgba(8, 121, 196, 0.24);
+
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease,
+    transform 0.35s ease,
+    background-color 0.35s ease;
+}
+
+/* VISIBLE AFTER SCROLLING */
+
+.ve-floating-backtop.ve-backtop-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* BACK TOP HOVER */
+
+.ve-floating-backtop:hover {
+  background: #102f50;
+  border-color: #102f50;
+  transform: translateY(-4px);
+}
+
+/* FOCUS */
+
+.ve-floating-whatsapp:focus-visible,
+.ve-floating-backtop:focus-visible,
+.ve-footer-social-icon:focus-visible {
+  outline: 3px solid #73c9ff;
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media (max-width: 991px) {
+  .ve-floating-whatsapp {
+    width: 52px;
+    height: 52px;
+    font-size: 27px;
+    right: 18px;
+    bottom: 95px;
+  }
+
+  .ve-floating-backtop {
+    right: 21px;
+    bottom: 24px;
+    width: 46px;
+    height: 46px;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .ve-footer-social-links {
+    gap: 9px;
+  }
+
+  .ve-footer-social-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .ve-floating-whatsapp {
+    width: 49px;
+    height: 49px;
+    font-size: 26px;
+    right: 15px;
+    bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .ve-floating-backtop {
+    width: 43px;
+    height: 43px;
+    right: 18px;
+    bottom: calc(22px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .ve-whatsapp-tooltip {
+    display: none;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .ve-footer-visible .ve-footer-reveal,
+  .ve-floating-whatsapp,
+  .ve-floating-whatsapp::before {
+    animation: none !important;
+  }
+
+  .ve-floating-whatsapp,
+  .ve-floating-backtop,
+  .ve-footer-social-icon {
+    transition: none !important;
+  }
+}
+
+/* ==========================================
+   VECTOR ENGINEERS - SOCIAL MEDIA ICONS
+   UPDATED HOVER EFFECTS
+========================================== */
+
+.ve-footer .ve-footer-social-block {
+  margin-top: 20px;
+}
+
+.ve-footer .ve-footer-social-block h5 {
+  color: #ffffff !important;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 17px;
+}
+
+.ve-footer .ve-footer-social-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* DEFAULT ICON STYLE */
+
+.ve-footer .ve-footer-social-icon {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  width: 45px;
+  height: 45px;
+
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 8px;
+
+  background: rgba(255,255,255,0.08) !important;
+  color: #ffffff !important;
+
+  font-size: 18px;
+  opacity: 1 !important;
+  cursor: default;
+
+  text-decoration: none !important;
+
+  box-shadow: none;
+
+  transform: translateY(0) scale(1);
+
+  transition:
+    background 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease,
+    transform 0.4s cubic-bezier(0.22,1,0.36,1),
+    box-shadow 0.4s ease !important;
+}
+
+.ve-footer a.ve-footer-social-icon {
+  cursor: pointer;
+}
+
+.ve-footer .ve-footer-social-icon svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  transition: transform 0.4s ease;
+}
+
+/* ==========================================
+   FACEBOOK - BLUE
+========================================== */
+
+.ve-footer .ve-footer-social-icon.facebook:hover {
+  background: #1877f2 !important;
+  border-color: #1877f2 !important;
+  color: #ffffff !important;
+
+  transform: translateY(-6px) scale(1.08);
+
+  box-shadow:
+    0 9px 22px rgba(24,119,242,0.3);
+}
+
+/* ==========================================
+   INSTAGRAM - GRADIENT
+========================================== */
+
+.ve-footer .ve-footer-social-icon.instagram:hover {
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  ) !important;
+
+  border-color: #d62976 !important;
+  color: #ffffff !important;
+
+  transform: translateY(-6px) scale(1.08);
+
+  box-shadow:
+    0 9px 22px rgba(214,41,118,0.3);
+}
+
+/* ==========================================
+   LINKEDIN - PROFESSIONAL BLUE
+========================================== */
+
+.ve-footer .ve-footer-social-icon.linkedin:hover {
+  background: #0a66c2 !important;
+  border-color: #0a66c2 !important;
+  color: #ffffff !important;
+
+  transform: translateY(-6px) scale(1.08);
+
+  box-shadow:
+    0 9px 22px rgba(10,102,194,0.3);
+}
+
+/* ==========================================
+   YOUTUBE - RED
+========================================== */
+
+.ve-footer .ve-footer-social-icon.youtube:hover {
+  background: #ff0033 !important;
+  border-color: #ff0033 !important;
+  color: #ffffff !important;
+
+  transform: translateY(-6px) scale(1.08);
+
+  box-shadow:
+    0 9px 22px rgba(255,0,51,0.3);
+}
+
+/* ==========================================
+   ICON ROTATION / SCALE
+========================================== */
+
+.ve-footer .ve-footer-social-icon:hover svg {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* ==========================================
+   LIGHT SHINE ANIMATION
+========================================== */
+
+.ve-footer .ve-footer-social-icon {
+  overflow: hidden;
+}
+
+.ve-footer .ve-footer-social-icon::after {
+  content: "";
+  position: absolute;
+
+  top: -120%;
+  left: -70%;
+
+  width: 30px;
+  height: 170%;
+
+  background: rgba(255,255,255,0.18);
+
+  transform: rotate(35deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.ve-footer .ve-footer-social-icon:hover::after {
+  left: 140%;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 767px) {
+  .ve-footer .ve-footer-social-links {
+    gap: 10px;
+  }
+
+  .ve-footer .ve-footer-social-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 17px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+.ve-footer a.ve-footer-social-icon:focus-visible {
+  outline: 3px solid #87d0ff;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ve-footer .ve-footer-social-icon,
+  .ve-footer .ve-footer-social-icon svg,
+  .ve-footer .ve-footer-social-icon::after {
+    transition: none !important;
+  }
+}
+
+
+
+
+/* ==========================================
+   VECTOR ENGINEERS
+   COMPACT CIRCULAR INDUSTRIES
+========================================== */
+
+.ve-circle-industries {
+  --ve-blue: #0879c4;
+  --ve-navy: #102f50;
+
+  padding: 65px 0 55px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.ve-circle-industries *,
+.ve-circle-industries *::before,
+.ve-circle-industries *::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   SECTION HEADER
+========================================== */
+
+.ve-circle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 35px;
+  margin-bottom: 48px;
+}
+
+.ve-circle-subtitle {
+  display: block;
+  margin-bottom: 12px;
+  color: #0879c4;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.ve-circle-header h2 {
+  margin: 0;
+  color: #102f50;
+  font-size: clamp(29px, 3vw, 42px);
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: -1px;
+}
+
+.ve-circle-header h2 span {
+  color: #0879c4;
+}
+
+.ve-circle-header-right {
+  max-width: 365px;
+  flex-shrink: 0;
+}
+
+.ve-circle-header-right p {
+  margin: 0 0 13px;
+  color: #657587;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.ve-circle-header-right a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #0879c4 !important;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+.ve-circle-header-right a svg,
+.ve-circle-bottom a svg {
+  transition: transform 0.3s ease;
+}
+
+.ve-circle-header-right a:hover svg,
+.ve-circle-bottom a:hover svg {
+  transform: translateX(5px);
+}
+
+/* ==========================================
+   SIX CIRCLE LAYOUT
+========================================== */
+
+.ve-circle-industries-list {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* FINE CONNECTING LINE */
+
+.ve-circle-industries-list::before {
+  content: "";
+  position: absolute;
+  top: 88px;
+  left: 5%;
+  right: 5%;
+  height: 1px;
+  background: #d7e6f1;
+  pointer-events: none;
+}
+
+.ve-circle-industry {
+  position: relative;
+  text-align: center;
+  min-width: 0;
+}
+
+/* CIRCULAR IMAGE WRAPPER */
+
+.ve-circle-photo-outer {
+  position: relative;
+  width: 100%;
+  max-width: 176px;
+  aspect-ratio: 1;
+  margin: 0 auto 20px;
+  padding: 7px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+/* ANIMATED BLUE RING */
+
+.ve-circle-photo-outer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid #d7e8f4;
+  border-radius: 50%;
+
+  transition:
+    border-color 0.4s ease,
+    transform 0.65s cubic-bezier(.22, 1, .36, 1);
+}
+
+.ve-circle-photo-outer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-top-color: #0879c4;
+  border-right-color: #0879c4;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.7s cubic-bezier(.22, 1, .36, 1);
+}
+
+/* ACTUAL CIRCLE IMAGE */
+
+.ve-circle-photo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #e8eef3;
+}
+
+.ve-circle-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition:
+    transform 0.8s cubic-bezier(.22, 1, .36, 1),
+    filter 0.6s ease;
+}
+
+/* SMALL NUMBER */
+
+.ve-circle-number {
+  position: absolute;
+  right: 4px;
+  bottom: 6px;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+
+  background: #0879c4;
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 750;
+}
+
+/* ==========================================
+   TEXT BELOW CIRCLES
+========================================== */
+
+.ve-circle-industry h3 {
+  max-width: 180px;
+  min-height: 43px;
+  margin: 0 auto -10px;
+
+  color: #102f50;
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.ve-circle-industry p {
+  max-width: 190px;
+  margin: 0 auto;
+
+  color: #708091;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* ==========================================
+   HOVER ANIMATIONS
+========================================== */
+
+@media (hover: hover) and (pointer: fine) {
+  .ve-circle-industry:hover .ve-circle-photo img {
+    transform: scale(1.12);
+    filter: saturate(1.08);
+  }
+
+  .ve-circle-industry:hover
+  .ve-circle-photo-outer::before {
+    border-color: #a4d5f2;
+    transform: scale(1.04);
+  }
+
+  .ve-circle-industry:hover
+  .ve-circle-photo-outer::after {
+    opacity: 1;
+    transform: rotate(110deg);
+  }
+
+  .ve-circle-industry:hover h3 {
+    color: #0879c4;
+  }
+}
+
+/* ==========================================
+   BOTTOM CTA
+========================================== */
+
+.ve-circle-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  margin-top: 42px;
+  padding-top: 22px;
+  border-top: 1px solid #e7edf3;
+}
+
+.ve-circle-bottom p {
+  margin: 0;
+  color: #102f50;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.ve-circle-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #0879c4 !important;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+/* ==========================================
+   SCROLL REVEAL
+========================================== */
+
+.ve-circle-industries .ve-circle-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.8s cubic-bezier(.22, 1, .36, 1);
+
+  transition-delay: var(--circle-delay, 0ms);
+}
+
+.ve-circle-industries
+.ve-circle-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================
+   RESPONSIVE - TABLET
+========================================== */
+
+@media (max-width: 1199px) {
+  .ve-circle-industries-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px 28px;
+  }
+
+  .ve-circle-industries-list::before {
+    display: none;
+  }
+
+  .ve-circle-photo-outer {
+    max-width: 175px;
+  }
+
+  .ve-circle-industry h3 {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .ve-circle-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .ve-circle-header-right {
+    max-width: 100%;
+  }
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media (max-width: 767px) {
+  .ve-circle-industries {
+    padding: 48px 0 50px;
+  }
+
+  .ve-circle-header {
+    margin-bottom: 30px;
+  }
+
+  .ve-circle-header h2 {
+    font-size: 30px;
+  }
+
+  .ve-circle-industries-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 15px;
+  }
+
+  .ve-circle-photo-outer {
+    max-width: 145px;
+    margin-bottom: 14px;
+  }
+
+  .ve-circle-industry h3 {
+    min-height: 40px;
+    font-size: 13px;
+  }
+
+  .ve-circle-industry p {
+    font-size: 11px;
+    line-height: 1.55;
+  }
+
+  .ve-circle-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 380px) {
+  .ve-circle-photo-outer {
+    max-width: 125px;
+  }
+
+  .ve-circle-industry h3 {
+    font-size: 12px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .ve-circle-industries .ve-circle-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .ve-circle-industries *,
+  .ve-circle-industries *::before,
+  .ve-circle-industries *::after {
+    transition: none !important;
+    animation: none !important;
+  }
 }

@@ -180,6 +180,14 @@ const ProductsOne = () => {
 
           {/* RIGHT INDUSTRIAL IMAGE */}
           <div className="ve-products-showcase">
+            <div className="ve-products-hero-image">
+              <img
+                src="/assets/img/prod-hm-bg.jpg"
+                alt="Industrial electrical distribution panels"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
 
             
 

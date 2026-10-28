@@ -1,7 +1,9 @@
 
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { FaArrowUp, FaArrowRight } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
+
+
 
 const industries = [
   {
@@ -10,7 +12,6 @@ const industries = [
     description:
       "Electrical solutions for industrial operations, power distribution and equipment protection.",
     image: "/assets/img/indus-hm-01.jpg",
-    link: "#",
   },
   {
     id: "02",
@@ -18,7 +19,6 @@ const industries = [
     description:
       "Reliable electrical infrastructure for offices, retail spaces and commercial developments.",
     image: "/assets/img/indus-hm-02.jpg",
-    link: "#",
   },
   {
     id: "03",
@@ -26,7 +26,6 @@ const industries = [
     description:
       "Dependable electrical products supporting infrastructure and utility requirements.",
     image: "/assets/img/indus-hm-03.jpg",
-    link: "#",
   },
   {
     id: "04",
@@ -34,7 +33,6 @@ const industries = [
     description:
       "Electrical distribution and protection solutions for healthcare and hospitality facilities.",
     image: "/assets/img/indus-hm-04.jpg",
-    link: "#",
   },
   {
     id: "05",
@@ -42,7 +40,6 @@ const industries = [
     description:
       "Power monitoring, distribution and protection for connected facilities.",
     image: "/assets/img/indus-hm-05.jpg",
-    link: "#",
   },
   {
     id: "06",
@@ -50,7 +47,6 @@ const industries = [
     description:
       "Energy monitoring and electrical components for renewable energy applications.",
     image: "/assets/img/indus-hm-06.jpg",
-    link: "#",
   },
 ];
 
@@ -59,22 +55,16 @@ const IndustriesOne = () => {
 
   useEffect(() => {
     const section = sectionRef.current;
-
     if (!section) return;
 
-    const elements = section.querySelectorAll(
-      ".ve-ind-reveal"
-    );
+    const items = section.querySelectorAll(".ve-circle-reveal");
 
-    if (
-      !("IntersectionObserver" in window) ||
-      window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches
-    ) {
-      elements.forEach((element) =>
-        element.classList.add("ve-ind-visible")
-      );
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (reducedMotion || !("IntersectionObserver" in window)) {
+      items.forEach((item) => item.classList.add("is-visible"));
       return;
     }
 
@@ -82,64 +72,48 @@ const IndustriesOne = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add(
-              "ve-ind-visible"
-            );
-
+            entry.target.classList.add("is-visible");
             observer.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.12,
-        rootMargin: "0px 0px -35px 0px",
+        threshold: 0.1,
+        rootMargin: "0px 0px 30px 0px",
       }
     );
 
-    elements.forEach((element) =>
-      observer.observe(element)
-    );
+    items.forEach((item) => observer.observe(item));
 
     return () => observer.disconnect();
   }, []);
 
   return (
     <section
-      className="ve-industries"
+      className="ve-circle-industries"
       ref={sectionRef}
-      aria-labelledby="ve-industries-title"
+      aria-labelledby="ve-circle-heading"
     >
       <div className="container">
 
-        {/* SECTION HEADER */}
-        <div className="ve-ind-header ve-ind-reveal">
+        {/* SECTION HEADING */}
+        <div className="ve-circle-header ve-circle-reveal">
 
-          <div className="ve-ind-heading">
-
-            <div className="ve-ind-eyebrow">
-              <span className="ve-ind-line" />
+          <div>
+            <span className="ve-circle-subtitle">
               INDUSTRIES WE SERVE
-            </div>
+            </span>
 
-            <h2 id="ve-industries-title">
+            <h2 id="ve-circle-heading">
               Powering Industries.
-              <br />
-              <span>Enabling Progress.</span>
+              <span> Enabling Progress.</span>
             </h2>
-
           </div>
 
-          <div className="ve-ind-header-right">
-            <p>
-              Delivering dependable electrical products
-              and solutions for industrial, commercial
-              and infrastructure requirements.
-            </p>
+          <div className="ve-circle-header-right">
+         
 
-            <Link
-              to="/industries"
-              className="ve-ind-view-all"
-            >
+            <Link to="#">
               Explore All Industries
               <FaArrowRight />
             </Link>
@@ -147,73 +121,47 @@ const IndustriesOne = () => {
 
         </div>
 
-        {/* INDUSTRY GRID */}
-        <div className="ve-ind-grid">
+        {/* CIRCULAR INDUSTRIES */}
+        <div className="ve-circle-industries-list">
 
           {industries.map((industry, index) => (
-            <Link
+            <div
+              className="ve-circle-industry ve-circle-reveal"
               key={industry.id}
-              to={industry.link}
-              className="ve-ind-card ve-ind-reveal"
               style={{
-                "--reveal-delay": `${(index % 3) * 100}ms`,
+                "--circle-delay": `${index * 80}ms`,
               }}
-              aria-label={`Explore ${industry.title}`}
             >
 
-              {/* IMAGE */}
-              <div className="ve-ind-image">
+              <div className="ve-circle-photo-outer">
 
-                <img
-                  src={industry.image}
-                  alt={industry.title}
-                  loading="lazy"
-                  decoding="async"
-                />
+                <div className="ve-circle-photo">
+                  <img
+                    src={industry.image}
+                    alt={industry.title}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
 
-                <div className="ve-ind-overlay" />
-
-              </div>
-
-              {/* CONTENT */}
-              <div className="ve-ind-card-content">
-
-                <span className="ve-ind-number">
+                <span
+                  className="ve-circle-number"
+                  aria-hidden="true"
+                >
                   {industry.id}
                 </span>
 
-                <div className="ve-ind-card-bottom">
-                  <div className="ve-ind-card-text">
-
-                    <h3>{industry.title}</h3>
-
-                    <p>{industry.description}</p>
-
-                  </div>
-
-                  <span className="ve-ind-card-arrow">
-                    <FaArrowUp />
-                  </span>
-                </div>
-
               </div>
 
-            </Link>
+              <h3>{industry.title}</h3>
+
+              <p>{industry.description}</p>
+
+            </div>
           ))}
 
         </div>
 
-        {/* BOTTOM NOTE */}
-        <div className="ve-ind-footer ve-ind-reveal">
-          <p>
-            Looking for electrical solutions for your project?
-          </p>
-
-          <Link to="/contact">
-            Discuss Your Requirements
-            <FaArrowRight />
-          </Link>
-        </div>
 
       </div>
     </section>

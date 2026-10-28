@@ -4,40 +4,74 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Slider from "react-slick";
 
 const PartnerOne = () => {
+
   function SampleNextArrow(props) {
     const { className, onClick } = props;
-    return <FaArrowLeft className={className} onClick={onClick} />;
+
+    return (
+      <FaArrowRight
+        className={className}
+        onClick={onClick}
+        aria-label="Next Client"
+      />
+    );
   }
 
   function SamplePrevArrow(props) {
     const { className, onClick } = props;
-    return <FaArrowRight className={className} onClick={onClick} />;
+
+    return (
+      <FaArrowLeft
+        className={className}
+        onClick={onClick}
+        aria-label="Previous Client"
+      />
+    );
   }
 
   const settings = {
     dots: false,
     arrows: true,
     infinite: true,
-    speed: 1000,
+    speed: 800,
     slidesToShow: 6,
     slidesToScroll: 1,
-    initialSlide: 1,
+    initialSlide: 0,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3500,
+    pauseOnHover: true,
+    swipeToSlide: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+
     responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+        },
+      },
       {
         breakpoint: 992,
         settings: {
           slidesToShow: 4,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
           arrows: false,
         },
       },
       {
         breakpoint: 576,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           arrows: false,
         },
@@ -45,164 +79,89 @@ const PartnerOne = () => {
     ],
   };
 
+  const clientLogos = [
+    "1.jpg",
+    "2.jpg",
+    "3.jpg",
+    "4.jpg",
+    "5.jpg",
+    "6.jpg",
+    "7.jpg",
+    "8.jpg",
+    "9.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.jpg",
+    "13.jpg",
+    "14.jpg",
+    "15.jpg",
+  ];
+
   return (
     <>
-      {/*partner-area start*/}
-      <div className='partner-area pd-top-90 pd-bottom-70'>
-        <div className='container'>
-          <div className='row justify-content-center'>
-            <div className='col-lg-7'>
-              <div className='section-title text-center'>
-                <h4 className='subtitle'>OUR BRANDS</h4>
-                <h2 className='title'>
-                  TRUSTED BRANDS. RELIABLE SOLUTIONS.
+      {/* ==========================================
+          VECTOR ENGINEERS - OUR CLIENTS
+      ========================================== */}
+
+      <section className="partner-area pd-top-90 pd-bottom-70 ve-clients-section">
+
+        <div className="container">
+
+          {/* SECTION HEADING */}
+
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
+
+              <div className="section-title text-center">
+
+                <h4 className="subtitle">
+                  OUR VALUED CLIENTS
+                </h4>
+
+                <h2 className="title">
+                  TRUSTED RELATIONSHIPS.
+                  <br />
+                  LASTING PARTNERSHIPS.
                 </h2>
-                <p className='content'>
-                  Explore our portfolio of established electrical
-                  brands offering dependable products for power
-                  distribution, energy management, protection,
-                  control and residential applications.
-                </p>
+
               </div>
+
             </div>
           </div>
 
-          <div className='partner-slider owl-carousel'>
+          {/* CLIENT LOGO SLIDER */}
+
+          <div className="partner-slider owl-carousel ve-clients-slider">
+
             <Slider {...settings}>
-              <div className='item'>
-                <div className='thumb'>
-                  <img
-                    src='assets/img/1.jpg'
-                    alt='Elmeasure - Energy Metering and Management'
-                  />
-                </div>
-              </div>
 
-              <div className='item'>
-                <div className='thumb'>
-                  <img
-                    src='assets/img/2.jpg'
-                    alt='C&S Electric - Switchgear and Protection'
-                  />
-                </div>
-              </div>
+              {clientLogos.map((logo, index) => (
 
-              <div className='item'>
-                <div className='thumb'>
-                  <img
-                    src='assets/img/3.jpg'
-                    alt='Powerflex - Wires and Cables'
-                  />
-                </div>
-              </div>
+                <div className="item" key={logo}>
 
-              <div className='item'>
-                <div className='thumb'>
-                  <img
-                    src='assets/img/4.jpg'
-                    alt='V-Guard - Residential Electrical Products'
-                  />
-                </div>
-              </div>
+                  <div className="thumb ve-client-logo">
 
-              <div className='item'>
-                <div className='thumb'>
-                  <img
-                    src='assets/img/5.jpg'
-                    alt='Neptune India - Industrial Electrical Products'
-                  />
-                </div>
-              </div>
+                    <img
+                      src={`/assets/img/${logo}`}
+                      alt={`Vector Engineers client logo ${index + 1}`}
+                      loading="lazy"
+                    />
 
-              <div className='item'>
-                <div className='thumb'>
-                  <img
-                    src='assets/img/6.jpg'
-                    alt='Trinity Touch - Electrical Components and Enclosures'
-                  />
-                </div>
-              </div>
+                  </div>
 
-              <div className='item'>
-                <div className='thumb'>
-                  <img
-                    src='assets/img/7.jpg'
-                    alt='C&S Electric - Switchgear and Protection'
-                  />
                 </div>
-              </div>
 
-              <div className='item'>
-                <div className='thumb'>
-                  <img
-                    src='assets/img/8.jpg'
-                    alt='Powerflex - Wires and Cables'
-                  />
-                </div>
-              </div>
+              ))}
 
-              <div className='item'>
-                <div className='thumb'>
-                  <img
-                    src='assets/img/9.jpg'
-                    alt='V-Guard - Residential Electrical Products'
-                  />
-                </div>
-              </div>
-
-              <div className='item'>
-                <div className='thumb'>
-                  <img
-                    src='assets/img/10.jpg'
-                    alt='Neptune India - Industrial Electrical Products'
-                  />
-                </div>
-              </div>
-              <div className='item'>
-                <div className='thumb'>
-                  <img
-                    src='assets/img/11.jpg'
-                    alt='Neptune India - Industrial Electrical Products'
-                  />
-                </div>
-              </div>
-              <div className='item'>
-                <div className='thumb'>
-                  <img
-                    src='assets/img/12.jpg'
-                    alt='Neptune India - Industrial Electrical Products'
-                  />
-                </div>
-              </div>
-              <div className='item'>
-                <div className='thumb'>
-                  <img
-                    src='assets/img/13.jpg'
-                    alt='Neptune India - Industrial Electrical Products'
-                  />
-                </div>
-              </div>
-              <div className='item'>
-                <div className='thumb'>
-                  <img
-                    src='assets/img/14.jpg'
-                    alt='Neptune India - Industrial Electrical Products'
-                  />
-                </div>
-              </div>
-              <div className='item'>
-                <div className='thumb'>
-                  <img
-                    src='assets/img/15.jpg'
-                    alt='Neptune India - Industrial Electrical Products'
-                  />
-                </div>
-              </div>
             </Slider>
+
           </div>
+
         </div>
-      </div>
-      {/*partner-area end*/}
+
+      </section>
+
+      {/* CLIENTS SECTION END */}
     </>
   );
 };

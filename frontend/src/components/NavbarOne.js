@@ -20,7 +20,7 @@ const menuItems = [
   },
   {
     title: "About Us",
-    path: "#",
+    path: "/about",
   },
   {
     title: "Industries",
@@ -50,12 +50,9 @@ const menuItems = [
   },
   {
     title: "Brands",
-    path: "#",
+    path: "/brands",
   },
-  {
-    title: "Contact Us",
-    path: "#",
-  },
+
 ];
 
 
@@ -100,33 +97,7 @@ const NavbarOne = () => {
   return (
     <header className={`ve-header ${sticky ? "ve-sticky" : ""}`}>
 
-      {/* TOP INFORMATION BAR */}
-      <div className="ve-topbar">
-        <div className="container ve-topbar-inner">
 
-          <div className="ve-topbar-left">
-            <a href="tel:+919491073449">
-              <FaPhoneAlt />
-              <span>+91 94910 73449</span>
-            </a>
-
-            <span className="ve-top-divider" />
-
-            <span className="ve-top-location">
-              <FaMapMarkerAlt />
-              Secunderabad, Telangana, India
-            </span>
-          </div>
-
-          <div className="ve-topbar-right">
-            <a href="#">
-              <FaEnvelope />
-              <span>Enquire With Us</span>
-            </a>
-          </div>
-
-        </div>
-      </div>
 
       {/* MAIN NAVIGATION */}
       <div className="ve-navbar">
@@ -207,8 +178,8 @@ const NavbarOne = () => {
           {/* HEADER ACTIONS */}
           <div className="ve-header-actions">
 
-            <Link to="#" className="ve-quote-btn">
-              Get a Quote
+            <Link to="/contact" className="ve-quote-btn">
+              Get in Touch
               <FaArrowRight />
             </Link>
 

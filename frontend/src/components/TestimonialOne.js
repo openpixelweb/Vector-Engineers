@@ -68,9 +68,7 @@ const TestimonialOne = () => {
                   dependable solutions and customer-focused
                   approach support diverse project requirements.
                 </p>
-                <p className='content'>
-                  Sample testimonials for design preview.
-                </p>
+             
               </div>
             </div>
           </div>

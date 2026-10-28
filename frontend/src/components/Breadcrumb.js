@@ -19,7 +19,7 @@ const Breadcrumb = ({ title }) => {
                     <li>
                       <Link to='/'>HOME</Link>
                     </li>{" "}
-                    /<li className='ps-0'>{title}</li>
+                    /<li className='ps-0'>{title}</li>  
                   </ul>
                 </div>
               </div>

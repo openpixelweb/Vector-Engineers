@@ -1,69 +1,395 @@
+
 import React, { Fragment, Suspense } from "react";
+import { Link } from "react-router-dom";
+
+import {
+  FaArrowRight,
+  FaBolt,
+  FaShieldAlt,
+  FaCogs,
+  FaHeadset,
+  FaCheck,
+} from "react-icons/fa";
+
 import Preloader from "../elements/Preloader";
-const AboutOne = React.lazy(() => import("../components/AboutOne"));
-const Breadcrumb = React.lazy(() => import("../components/Breadcrumb"));
-const CounterOne = React.lazy(() => import("../components/CounterOne"));
+
 const FooterBottomOne = React.lazy(() =>
   import("../components/FooterBottomOne")
 );
-const FooterOne = React.lazy(() => import("../components/FooterOne"));
-const NavbarOne = React.lazy(() => import("../components/NavbarOne"));
-const PartnerOne = React.lazy(() => import("../components/PartnerOne"));
-const SkillOne = React.lazy(() => import("../components/SkillOne"));
-const TeamOne = React.lazy(() => import("../components/TeamOne"));
-const TestimonialTwo = React.lazy(() => import("../components/TestimonialTwo"));
-const VideoAreaOne = React.lazy(() => import("../components/VideoAreaOne"));
-const SearchPopup = React.lazy(() => import("../elements/SearchPopup"));
+
+const FooterOne = React.lazy(() =>
+  import("../components/FooterOne")
+);
+
+const NavbarOne = React.lazy(() =>
+  import("../components/NavbarOne")
+);
+
+const SearchPopup = React.lazy(() =>
+  import("../elements/SearchPopup")
+);
+
 const About = () => {
+  const title = "About Us";
+
+  const strengths = [
+    {
+      icon: <FaBolt />,
+      title: "Electrical Product Expertise",
+      description:
+        "Practical guidance for selecting suitable electrical products.",
+    },
+    {
+      icon: <FaShieldAlt />,
+      title: "Quality & Reliability",
+      description:
+        "Dependable products for safe and efficient electrical systems.",
+    },
+    {
+      icon: <FaCogs />,
+      title: "Comprehensive Solutions",
+      description:
+        "Products for industrial, commercial and residential needs.",
+    },
+    {
+      icon: <FaHeadset />,
+      title: "Customer-Focused Support",
+      description:
+        "Responsive assistance for project-specific requirements.",
+    },
+  ];
+
   return (
-    <>
-      <Fragment>
-        <Suspense fallback={<Preloader />}>
-          {/* Search Popup */}
-          <SearchPopup />
+    <Fragment>
+      <Suspense fallback={<Preloader />}>
 
-          {/* Navbar One */}
-          <NavbarOne />
+        {/* Search Popup */}
+        <SearchPopup />
 
-          {/* Breadcrumb */}
-          <Breadcrumb title={"ABOUT US"} />
+        {/* Navbar */}
+        <NavbarOne />
 
-          {/* About One */}
-          <div className='pd-top-120 pd-bottom-120'>
-            <AboutOne />
+        {/* =====================================
+            ABOUT PAGE BANNER
+        ===================================== */}
+
+        <div
+          className="breadcrumb-area bg-overlay-2 ve-about-banner"
+          style={{
+            backgroundImage:
+              'url("/assets/img/banner/about-banner.jpg")',
+          }}
+        >
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <div className="breadcrumb-inner">
+                  <div className="section-title mb-0">
+
+                    <h4 className="ve-about-banner-subtitle">
+                      ABOUT VECTOR ENGINEERS
+                    </h4>
+
+                    <h1 className="page-title">
+                      Engineering Trust.
+                      <br />
+                      <span>Powering Progress.</span>
+                    </h1>
+
+                    <p className="ve-about-banner-description">
+                      Delivering reliable electrical products
+                      and solutions for industrial, commercial
+                      and residential requirements, backed by
+                      technical expertise and a commitment
+                      to quality.
+                    </p>
+
+                    <ul className="page-list">
+                      <li>
+                        <Link to="/">Home</Link>
+                      </li>
+
+                      <li className="ps-0">
+                        {title}
+                      </li>
+                    </ul>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* =====================================
+            SECTION 02 - WHO WE ARE
+        ===================================== */}
+
+        <section className="ve-about-company">
+          <div className="container">
+            <div className="row align-items-center gy-5">
+
+              {/* LEFT IMAGES */}
+              <div className="col-lg-6">
+                <div className="ve-about-company-visual">
+
+                  <div className="ve-about-main-photo">
+                    <img
+                      src="/assets/img/about/about-engineering.jpg"
+                      alt="Electrical engineering installation"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div className="ve-about-secondary-photo">
+                    <img
+                      src="/assets/img/about/about-switchgear.jpg"
+                      alt="Electrical switchgear equipment"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div className="ve-about-visual-label">
+                    <span className="ve-about-label-icon">
+                      <FaBolt />
+                    </span>
+
+                    <span>
+                      <strong>Electrical Expertise</strong>
+                      <small>
+                        Solutions for Every Requirement
+                      </small>
+                    </span>
+                  </div>
+
+                </div>
+              </div>
+
+              {/* RIGHT CONTENT */}
+              <div className="col-lg-6">
+                <div className="ve-about-company-content">
+
+                  <div className="ve-about-section-label">
+                    <span />
+                    WHO WE ARE
+                  </div>
+
+                  <h2>
+                    Built on Trust.
+                    <br />
+                    <span>Driven by Expertise.</span>
+                  </h2>
+
+                  <p className="ve-about-intro">
+                    Vector Engineers provides reliable
+                    electrical products and solutions for
+                    industrial, commercial and residential
+                    requirements.
+                  </p>
+
+                  <p className="ve-about-description">
+                    With a focus on product quality, technical
+                    knowledge and customer satisfaction, we
+                    help businesses, contractors and project
+                    developers identify electrical products
+                    suited to their specific needs.
+                  </p>
+
+                  <p className="ve-about-description">
+                    Our product portfolio supports power
+                    distribution, energy metering, electrical
+                    protection, control, automation and other
+                    essential electrical infrastructure
+                    applications.
+                  </p>
+
+                  {/* CORE STRENGTHS */}
+                  <div className="ve-about-strengths">
+                    {strengths.map((item, index) => (
+                      <div
+                        className="ve-about-strength"
+                        key={index}
+                      >
+                        <div className="ve-about-strength-icon">
+                          {item.icon}
+                        </div>
+
+                        <div>
+                          <h4>{item.title}</h4>
+                          <p>{item.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="ve-about-commitment">
+                    <FaCheck />
+                    <span>
+                      Your Requirements. Our Expertise.
+                      Reliable Solutions.
+                    </span>
+                  </div>
+
+                  <Link
+                    to="/contact"
+                    className="ve-about-company-btn"
+                  >
+                    Talk to Our Team
+                    <FaArrowRight />
+                  </Link>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+
+
+        
+{/* =============================================
+    SECTION 03 - OUR VISION & MISSION
+============================================= */}
+
+<section className="ve-purpose-section">
+  <div className="container">
+
+    {/* SECTION INTRODUCTION */}
+    <div className="row align-items-end ve-purpose-heading">
+      <div className="col-lg-7">
+        <div className="ve-purpose-label">
+          <span className="ve-purpose-label-line"></span>
+          OUR PURPOSE & COMMITMENT
+        </div>
+
+        <h2>
+          Driven by Purpose.
+          <br />
+          <span>Committed to Excellence.</span>
+        </h2>
+      </div>
+
+      <div className="col-lg-5">
+        <p className="ve-purpose-intro">
+          Our vision and mission reflect our commitment
+          to reliable electrical products, technical
+          expertise and long-term customer relationships.
+        </p>
+      </div>
+    </div>
+
+    {/* MAIN SPLIT LAYOUT */}
+    <div className="row g-0 ve-purpose-main">
+
+      {/* LEFT PHOTOGRAPH */}
+      <div className="col-lg-5">
+        <div className="ve-purpose-visual">
+
+          <img
+            src="/assets/img/about/vision-mission.jpg"
+            alt="Electrical engineering and power distribution infrastructure"
+            loading="lazy"
+          />
+
+          <div className="ve-purpose-photo-overlay">
+            <span className="ve-purpose-photo-line"></span>
+            <p>
+              Supporting progress through dependable
+              electrical technologies.
+            </p>
           </div>
 
-          {/* Counter One */}
+        </div>
+      </div>
 
-          <div className='fact-area' style={{ background: "#f9f9f9" }}>
-            <CounterOne />
+      {/* RIGHT CONTENT */}
+      <div className="col-lg-7">
+        <div className="ve-purpose-content">
+
+          {/* VISION */}
+          <div className="ve-purpose-item">
+            <div className="ve-purpose-number">
+              01
+            </div>
+
+            <div className="ve-purpose-item-body">
+              <span className="ve-purpose-item-label">
+                WHERE WE ASPIRE TO BE
+              </span>
+
+              <h3>Our Vision</h3>
+
+              <p>
+                To become a trusted and preferred
+                electrical solutions partner, empowering
+                industries, businesses and residential
+                developments with safe, efficient and
+                reliable electrical technologies.
+              </p>
+            </div>
           </div>
 
-          {/* Skill One */}
-          <SkillOne />
+          {/* DIVIDER */}
+          <div className="ve-purpose-item-divider"></div>
 
-          {/* Video Area One */}
-          <VideoAreaOne />
+          {/* MISSION */}
+          <div className="ve-purpose-item">
+            <div className="ve-purpose-number">
+              02
+            </div>
 
-          {/* Team One */}
-          <div className='pd-bottom-80'>
-            <TeamOne />
+            <div className="ve-purpose-item-body">
+              <span className="ve-purpose-item-label">
+                HOW WE DELIVER VALUE
+              </span>
+
+              <h3>Our Mission</h3>
+
+              <p>
+                To provide quality electrical products
+                and application-focused solutions by
+                combining technical knowledge,
+                dependable product choices and
+                responsive customer support, helping
+                customers achieve their project
+                requirements with confidence.
+              </p>
+            </div>
           </div>
 
-          {/* Testimonial Two */}
-          <TestimonialTwo />
+        </div>
+      </div>
 
-          {/* Partner One */}
-          <PartnerOne />
+    </div>
 
-          {/* Footer One */}
-          <FooterOne />
+    {/* BOTTOM COMMITMENT STRIP */}
+    <div className="ve-purpose-bottom">
+      <div className="ve-purpose-bottom-content">
+        <span>OUR COMMITMENT</span>
 
-          {/* Footer Bottom One */}
-          <FooterBottomOne />
-        </Suspense>
-      </Fragment>
-    </>
+        <h4>
+          Reliable Products.
+          <span> Practical Solutions.</span>
+          Lasting Partnerships.
+        </h4>
+      </div>
+
+      <div className="ve-purpose-bottom-mark">
+        VE
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+        {/* Footer */}
+        <FooterOne />
+
+      </Suspense>
+    </Fragment>
   );
 };
 
