@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 import NavbarOne from "../components/NavbarOne";
 import FooterOne from "../components/FooterOne";
-import FooterBottomOne from "../components/FooterBottomOne";
 import SearchPopup from "../elements/SearchPopup";
 
 

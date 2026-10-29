@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 import {
-  FaArrowRight,
   FaBolt,
   FaChartLine,
   FaShieldAlt,
@@ -17,7 +16,6 @@ import {
 
 import NavbarOne from "../components/NavbarOne";
 import FooterOne from "../components/FooterOne";
-import FooterBottomOne from "../components/FooterBottomOne";
 import SearchPopup from "../elements/SearchPopup";
 
 
@@ -405,7 +403,6 @@ const HighRiseApartments = () => {
       </main>
 
       <FooterOne />
-      <FooterBottomOne />
     </>
   );
 };

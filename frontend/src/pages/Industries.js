@@ -1,7 +1,6 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaArrowRight } from "react-icons/fa";
 
 import NavbarOne from "../components/NavbarOne";
 import FooterOne from "../components/FooterOne";

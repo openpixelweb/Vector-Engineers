@@ -11,7 +11,6 @@ import {
   FaSearch,
   FaTimes,
   FaBolt,
-  FaArrowRight,
   FaChevronLeft,
   FaChevronRight,
 } from "react-icons/fa";

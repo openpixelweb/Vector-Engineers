@@ -5,9 +5,6 @@ const AboutOne = React.lazy(() => import("../components/AboutOne"));
 const ProductsOne = React.lazy(() => import("../components/ProductsOne"));
 const CounterOne = React.lazy(() => import("../components/CounterOne"));
 const FeatureOne = React.lazy(() => import("../components/FeatureOne"));
-const FooterBottomOne = React.lazy(() =>
-  import("../components/FooterBottomOne")
-);
 const FooterOne = React.lazy(() => import("../components/FooterOne"));
 const NavbarOne = React.lazy(() => import("../components/NavbarOne"));
 const PartnerOne = React.lazy(() => import("../components/PartnerOne"));

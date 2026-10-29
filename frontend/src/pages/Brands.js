@@ -23,9 +23,6 @@ const FooterOne = React.lazy(() =>
   import("../components/FooterOne")
 );
 
-const FooterBottomOne = React.lazy(() =>
-  import("../components/FooterBottomOne")
-);
 
 /* =====================================
    ADD ALL YOUR BRANDS HERE

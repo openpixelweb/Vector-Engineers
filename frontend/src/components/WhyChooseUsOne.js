@@ -1,9 +1,8 @@
 
 import React, { useState } from "react";
-import { FaPlay } from "react-icons/fa";
 
 const WhyChooseUsOne = () => {
-  const [isOpen, setOpen] = useState(false);
+  const [] = useState(false);
 
   return (
     <>

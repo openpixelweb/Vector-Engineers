@@ -8,7 +8,6 @@ import {
   FaExternalLinkAlt,
   FaSearch,
   FaTimes,
-  FaFolderOpen,
   FaChevronDown,
 } from "react-icons/fa";
 

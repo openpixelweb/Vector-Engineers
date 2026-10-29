@@ -13,9 +13,7 @@ import {
 
 import Preloader from "../elements/Preloader";
 
-const FooterBottomOne = React.lazy(() =>
-  import("../components/FooterBottomOne")
-);
+
 
 const FooterOne = React.lazy(() =>
   import("../components/FooterOne")
@@ -30,7 +28,7 @@ const SearchPopup = React.lazy(() =>
 );
 
 const About = () => {
-  const title = "About Us";
+
 
   const strengths = [
     {
