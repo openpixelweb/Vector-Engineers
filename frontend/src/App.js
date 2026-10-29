@@ -18,6 +18,13 @@ import HomeThree from "./pages/HomeThree";
 import HomeFour from "./pages/HomeFour";
 import HomeFive from "./pages/HomeFive";
 import Brands from "./pages/Brands";
+import Industries from "./pages/Industries";
+import Clients from "./pages/Clients";
+import Products from "./pages/Products";
+import Applications from "./pages/Applications";
+import Villas from "./pages/Villas";
+import HighRiseApartments from "./pages/HighRiseApartments";
+import Certificates from "./pages/Certificates";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -45,6 +52,13 @@ function App() {
         <Route exact path='/faq' element={<Faq />} />
         <Route exact path='/contact' element={<Contact />} />
         <Route path="/brands" element={<Brands />} />
+        <Route path="/industries" element={<Industries />} />
+        <Route path="/clients" element={<Clients />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/applications" element={<Applications />} />
+        <Route path="/residential/villas" element={<Villas />} />
+        <Route path="/residential/high-rise-apartments" element={<HighRiseApartments />} />
+        <Route path="/certificates" element={<Certificates />} />
       </Routes>
       <ScrollToTop smooth color='#FA4318' />
     </BrowserRouter>

@@ -73,53 +73,51 @@ const About = () => {
             ABOUT PAGE BANNER
         ===================================== */}
 
-        <div
-          className="breadcrumb-area bg-overlay-2 ve-about-banner"
-          style={{
-            backgroundImage:
-              'url("/assets/img/banner/about-banner.jpg")',
-          }}
-        >
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <div className="breadcrumb-inner">
-                  <div className="section-title mb-0">
+        
+{/* ==========================================
+    VECTOR ENGINEERS - ABOUT PAGE BANNER
+========================================== */}
 
-                    <h4 className="ve-about-banner-subtitle">
-                      ABOUT VECTOR ENGINEERS
-                    </h4>
+<div
+  className="breadcrumb-area bg-overlay-2 ve-about-banner"
+  style={{
+    backgroundImage:
+      'url("/assets/img/about-banner.jpg")',
+  }}
+>
+  <div className="container">
+    <div className="row justify-content-center">
+      <div className="col-lg-12">
 
-                    <h1 className="page-title">
-                      Engineering Trust.
-                      <br />
-                      <span>Powering Progress.</span>
-                    </h1>
+        <div className="breadcrumb-inner">
+          <div className="section-title mb-0">
 
-                    <p className="ve-about-banner-description">
-                      Delivering reliable electrical products
-                      and solutions for industrial, commercial
-                      and residential requirements, backed by
-                      technical expertise and a commitment
-                      to quality.
-                    </p>
+            {/* PAGE TITLE */}
+            <h1 className="page-title">
+              About Us
+            </h1>
 
-                    <ul className="page-list">
-                      <li>
-                        <Link to="/">Home</Link>
-                      </li>
+            {/* BREADCRUMB */}
+            <ul className="page-list">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
 
-                      <li className="ps-0">
-                        {title}
-                      </li>
-                    </ul>
+              <li className="ps-0">
+                About Us
+              </li>
+            </ul>
 
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* ABOUT BANNER END */}
+
 
         {/* =====================================
             SECTION 02 - WHO WE ARE
@@ -135,7 +133,7 @@ const About = () => {
 
                   <div className="ve-about-main-photo">
                     <img
-                      src="/assets/img/about/about-engineering.jpg"
+                      src="/assets/img/about-engineering.jpg"
                       alt="Electrical engineering installation"
                       loading="lazy"
                     />
@@ -143,7 +141,7 @@ const About = () => {
 
                   <div className="ve-about-secondary-photo">
                     <img
-                      src="/assets/img/about/about-switchgear.jpg"
+                      src="/assets/img/about-switchgear.jpg"
                       alt="Electrical switchgear equipment"
                       loading="lazy"
                     />
@@ -272,11 +270,7 @@ const About = () => {
       </div>
 
       <div className="col-lg-5">
-        <p className="ve-purpose-intro">
-          Our vision and mission reflect our commitment
-          to reliable electrical products, technical
-          expertise and long-term customer relationships.
-        </p>
+        
       </div>
     </div>
 
@@ -288,7 +282,7 @@ const About = () => {
         <div className="ve-purpose-visual">
 
           <img
-            src="/assets/img/about/vision-mission.jpg"
+            src="/assets/img/vision-mission.jpg"
             alt="Electrical engineering and power distribution infrastructure"
             loading="lazy"
           />

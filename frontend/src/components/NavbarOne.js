@@ -18,40 +18,60 @@ const menuItems = [
     title: "Home",
     path: "/",
   },
+  
+
+{
+  title: "Overview",
+  path: "#",
+  children: [
+    {
+      title: "About Us",
+      path: "/about",
+    },
+    {
+      title: "Our Brands",
+      path: "/brands",
+    },
+    {
+      title: "Certificates",
+      path: "/certificates",
+    },
+  ],
+},
+
+
   {
-    title: "About Us",
-    path: "/about",
-  },
-  {
-    title: "Industries",
-    path: "#",
-  },
-  {
-    title: "Products",
-    path: "#",
-  },
-  {
-    title: "Applications",
-    path: "#",
-  },
-  {
-    title: "Residential Solutions",
-    path: "#",
-    children: [
-      {
-        title: "Villas",
-        path: "#",
-      },
-      {
-        title: "High-Rise Apartments",
-        path: "#",
-      },
-    ],
-  },
-  {
-    title: "Brands",
-    path: "/brands",
-  },
+  title: "Industries",
+  path: "/industries",
+},
+{
+  title: "Products",
+  path: "/products",
+},
+{
+  title: "Applications",
+  path: "/applications",
+},
+
+{
+  title: "Residential Solutions",
+  path: "#",
+  children: [
+    {
+      title: "Villas",
+      path: "/residential/villas",
+    },
+    {
+      title: "High-Rise Apartments",
+      path: "/residential/high-rise-apartments",
+    },
+  ],
+},
+
+{
+  title: "Our Clients",
+  path: "/clients",
+},
 
 ];
 

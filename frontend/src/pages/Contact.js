@@ -88,47 +88,50 @@ const Contact = () => {
         {/* =========================================
             CONTACT PAGE BANNER
         ========================================= */}
-        <section
-          className="ve-contact-banner"
-          style={{
-            backgroundImage:
-              'url("/assets/img/banner/contact-banner.jpg")',
-          }}
-        >
-          <div className="container">
-            <div className="ve-contact-banner-content">
+        
+{/* ==========================================
+    VECTOR ENGINEERS - CONTACT PAGE BANNER
+========================================== */}
 
-              <span className="ve-contact-banner-label">
-                CONTACT VECTOR ENGINEERS
-              </span>
+<div
+  className="breadcrumb-area bg-overlay-2 ve-about-banner"
+  style={{
+    backgroundImage:
+      'url("/assets/img/contact-banner.jpg")',
+  }}
+>
+  <div className="container">
+    <div className="row justify-content-center">
+      <div className="col-lg-12">
 
-              <h1>
-                Let's Connect.
-                <br />
-                <span>Let's Power Your Project.</span>
-              </h1>
+        <div className="breadcrumb-inner">
+          <div className="section-title mb-0">
 
-              <p>
-                Have a question about electrical products or
-                need assistance with your project? Connect
-                with our team for product enquiries and
-                electrical solution requirements.
-              </p>
+            {/* PAGE TITLE */}
+            <h1 className="page-title">
+              Contact Us
+            </h1>
 
-              <nav aria-label="Breadcrumb">
-                <ol className="ve-contact-breadcrumb">
-                  <li>
-                    <Link to="/">Home</Link>
-                  </li>
-                  <li aria-current="page">
-                    Contact Us
-                  </li>
-                </ol>
-              </nav>
+            {/* BREADCRUMB */}
+            <ul className="page-list">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
 
-            </div>
+              <li className="ps-0">
+                Contact Us
+              </li>
+            </ul>
+
           </div>
-        </section>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* CONTACT PAGE BANNER END */}
 
         {/* =========================================
             CONTACT INTRO + CONTACT INFORMATION
@@ -278,7 +281,7 @@ const Contact = () => {
                 <div className="ve-contact-enquiry-visual">
 
                   <img
-                    src="/assets/img/contact/contact-engineering.jpg"
+                    src="/assets/img/contact-01.jpg"
                     alt="Industrial electrical engineering equipment"
                     loading="lazy"
                   />

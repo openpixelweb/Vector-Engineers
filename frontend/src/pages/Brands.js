@@ -35,38 +35,44 @@ const brands = [
   {
     id: 1,
     name: "Elmeasure",
-    logo: "/assets/img/1.jpg",
+    logo: "/assets/img/brands-ve-01.png",
     link: "https://www.elmeasure.com/",
   },
   {
     id: 2,
     name: "C&S Electric",
-    logo: "/assets/img/2.jpg",
+    logo: "/assets/img/brands-ve-02.png",
     link: "https://cselectric.co.in/",
   },
   {
     id: 3,
     name: "Powerflex",
-    logo: "/assets/img/brands/powerflex.png",
+    logo: "/assets/img/brands-ve-07.png",
     link: "https://powerflex.co.in/",
   },
   {
     id: 4,
     name: "V-Guard",
-    logo: "/assets/img/brands/vguard.png",
+    logo: "/assets/img/brands-ve-03.png",
     link: "https://vguard.com/",
   },
   {
     id: 5,
     name: "Neptune India",
-    logo: "/assets/img/brands/neptune.png",
+    logo: "/assets/img/brands-ve-04.png",
     link: "https://www.neptuneindia.com/",
   },
   {
     id: 6,
     name: "Trinity Touch",
-    logo: "/assets/img/brands/trinity-touch.png",
+    logo: "/assets/img/brands-ve-05.png",
     link: "https://www.trinitytouch.com/",
+  },
+  {
+    id: 7,
+    name: "Precision Pipes",
+    logo: "/assets/img/brands-ve-06.png",
+    link: "https://precisionpipes.com/",
   },
 ];
 
@@ -105,45 +111,50 @@ const Brands = () => {
         <NavbarOne />
 
         {/* PAGE BANNER */}
-        <section
-          className="ve-brands-banner"
-          style={{
-            backgroundImage:
-              'url("/assets/img/banner/brands-banner.jpg")',
-          }}
-        >
-          <div className="container">
-            <div className="ve-brands-banner-inner">
+        
+{/* ==========================================
+    VECTOR ENGINEERS - BRANDS PAGE BANNER
+========================================== */}
 
-              <span className="ve-brands-banner-tag">
-                OUR ELECTRICAL BRANDS
-              </span>
+<div
+  className="breadcrumb-area bg-overlay-2 ve-about-banner"
+  style={{
+    backgroundImage:
+      'url("/assets/img/brands-banner.jpg")',
+  }}
+>
+  <div className="container">
+    <div className="row justify-content-center">
+      <div className="col-lg-12">
 
-              <h1>
-                Trusted Brands.
-                <br />
-                <span>Reliable Solutions.</span>
-              </h1>
+        <div className="breadcrumb-inner">
+          <div className="section-title mb-0">
 
-              <p>
-                Explore established electrical brands
-                offering products for power distribution,
-                energy management, protection and
-                industrial applications.
-              </p>
+            {/* PAGE TITLE */}
+            <h1 className="page-title">
+              Our Brands
+            </h1>
 
-              <nav aria-label="Breadcrumb">
-                <ul className="ve-brands-breadcrumb">
-                  <li>
-                    <Link to="/">Home</Link>
-                  </li>
-                  <li aria-current="page">Brands</li>
-                </ul>
-              </nav>
+            {/* BREADCRUMB */}
+            <ul className="page-list">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
 
-            </div>
+              <li className="ps-0">
+                Our Brands
+              </li>
+            </ul>
+
           </div>
-        </section>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{/* BRANDS PAGE BANNER END */}
 
         {/* COMPACT BRANDS GRID */}
         <section className="ve-compact-brands">
@@ -157,11 +168,7 @@ const Brands = () => {
                 </h2>
               </div>
 
-              <p>
-                Explore our electrical brand portfolio
-                and visit manufacturer websites for
-                detailed product information.
-              </p>
+              
             </div>
 
             <div className="ve-compact-brands-grid">
@@ -253,7 +260,6 @@ const Brands = () => {
         </section>
 
         <FooterOne />
-        <FooterBottomOne />
 
       </Suspense>
     </Fragment>
