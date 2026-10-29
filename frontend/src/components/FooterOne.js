@@ -32,19 +32,19 @@ const quickLinks = [
 const solutionLinks = [
   {
     title: "Energy Metering",
-    link: "/products/energy-metering",
+    link: "/products",
   },
   {
     title: "Switchgear & Protection",
-    link: "/products/switchgear-protection",
+    link: "/products",
   },
   {
     title: "Wires & Cables",
-    link: "/products/wires-cables",
+    link: "/products",
   },
   {
     title: "Control & Automation",
-    link: "/products/control-automation",
+    link: "/products",
   },
   {
     title: "Villas",

@@ -114,9 +114,9 @@ const PartnerOne = () => {
 
               <div className="section-title text-center">
 
-                <h4 className="subtitle">
+                {/* <h4 className="subtitle">
                   OUR VALUED CLIENTS
-                </h4>
+                </h4> */}
 
                 <h2 className="title">
                   TRUSTED RELATIONSHIPS.

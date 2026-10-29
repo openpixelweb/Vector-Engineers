@@ -61,7 +61,7 @@ const TestimonialOne = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-6'>
               <div className='section-title text-center mb-0'>
-                <h4 className='subtitle'>CLIENT TESTIMONIALS</h4>
+                {/* <h4 className='subtitle'>CLIENT TESTIMONIALS</h4> */}
                 <h2 className='title'>WHAT OUR CLIENTS SAY</h2>
                 <p className='content'>
                   Discover how our electrical product expertise,
