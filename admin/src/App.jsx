@@ -39,7 +39,7 @@ import {
 
 const BASE = (
   import.meta.env.VITE_API_BASE_URL ||
-  "http://localhost:5000"
+  "https://vector-engineers-backend-476393526056.asia-southeast1.run.app"
 ).replace(/\/$/, "");
 
 const LOGO = "/vector-logo.png";
