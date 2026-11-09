@@ -16,7 +16,7 @@ import {
 import "./LiveProductsCatalog.css";
 
 const API = (
-  process.env.REACT_APP_API_URL || "http://localhost:5000"
+  process.env.REACT_APP_API_URL || "https://vector-engineers-backend-476393526056.asia-southeast1.run.app"
 ).replace(/\/$/, "");
 
 const PAGE_SIZE = 9;
