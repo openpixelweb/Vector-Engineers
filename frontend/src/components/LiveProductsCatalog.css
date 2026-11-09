@@ -1,0 +1,694 @@
+
+/* ==========================================
+   VECTOR ENGINEERS — PRODUCTS CATALOGUE
+========================================== */
+
+.ve-catalog-section {
+  padding: 75px 0 95px;
+  background: #f6f8fb;
+  color: #102f50;
+}
+
+.ve-catalog-section *,
+.ve-catalog-section *::before,
+.ve-catalog-section *::after {
+  box-sizing: border-box;
+}
+
+.ve-catalog-heading {
+  margin-bottom: 28px;
+}
+
+.ve-catalog-eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  color: #0879c4;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.ve-catalog-heading h2 {
+  color: #102f50;
+  font-size: clamp(27px, 3.2vw, 38px);
+  font-weight: 700;
+  margin: 0 0 11px;
+  letter-spacing: -.5px;
+}
+
+.ve-catalog-heading p {
+  max-width: 690px;
+  margin: 0;
+  color: #6b7c8e;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* SEARCH */
+
+.ve-catalog-searchbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 7px 7px 7px 20px;
+  margin-bottom: 30px;
+  border: 1px solid #e1e8ef;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(16,47,80,.025);
+}
+
+.ve-catalog-search-icon {
+  color: #7890a5;
+  flex-shrink: 0;
+}
+
+.ve-catalog-searchbar input {
+  min-width: 0;
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 12px 0;
+  outline: none;
+  color: #102f50;
+  font-size: 14px;
+}
+
+.ve-catalog-searchbar input::placeholder {
+  color: #91a0ae;
+}
+
+.ve-catalog-searchbar button {
+  flex-shrink: 0;
+  border: none;
+  border-radius: 6px;
+  background: #0879c4;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 14px 23px;
+  cursor: pointer;
+  transition: background .2s ease;
+}
+
+.ve-catalog-searchbar button:hover {
+  background: #06649e;
+}
+
+/* MAIN STRUCTURE */
+
+.ve-catalog-layout {
+  display: grid;
+  grid-template-columns: 255px minmax(0, 1fr);
+  align-items: start;
+  gap: 26px;
+}
+
+.ve-catalog-sidebar {
+  background: #fff;
+  border: 1px solid #e2eaf2;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.ve-catalog-sidebar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 9px;
+  padding: 21px 19px;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.ve-catalog-sidebar-top h3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #102f50;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.ve-catalog-sidebar-top h3 svg {
+  color: #0879c4;
+  font-size: 15px;
+}
+
+.ve-catalog-clear {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #0879c4;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ve-catalog-filter-block {
+  padding: 22px 19px;
+  border-bottom: 1px solid #edf1f5;
+}
+
+.ve-catalog-filter-block h4 {
+  margin: 0 0 17px;
+  color: #102f50;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ve-catalog-filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-height: 270px;
+  overflow-y: auto;
+}
+
+.ve-catalog-filter-options label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  color: #52677b;
+  font-size: 13px;
+  line-height: 1.45;
+  cursor: pointer;
+}
+
+.ve-catalog-filter-options label:hover {
+  color: #0879c4;
+}
+
+.ve-catalog-filter-options input[type="radio"] {
+  flex-shrink: 0;
+  margin: 2px 0 0;
+  accent-color: #0879c4;
+  cursor: pointer;
+}
+
+.ve-catalog-filter-block select {
+  width: 100%;
+  min-height: 43px;
+  padding: 10px 12px;
+  border: 1px solid #dce6ef;
+  border-radius: 5px;
+  background: #fff;
+  color: #52677b;
+  font-size: 13px;
+}
+
+.ve-catalog-filter-hint {
+  color: #8a99a9;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.ve-catalog-sidebar-bottom {
+  display: flex;
+  gap: 11px;
+  padding: 20px 19px;
+  background: #f8fbfe;
+}
+
+.ve-catalog-sidebar-bottom svg {
+  margin-top: 3px;
+  flex-shrink: 0;
+  color: #0879c4;
+}
+
+.ve-catalog-sidebar-bottom p {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #71869a;
+  margin: 0;
+}
+
+/* TOOLBAR */
+
+.ve-catalog-content {
+  min-width: 0;
+  scroll-margin-top: 100px;
+}
+
+.ve-catalog-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 15px 19px;
+  margin-bottom: 19px;
+  border: 1px solid #e2eaf2;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.ve-catalog-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #6c7d8d;
+  font-size: 13px;
+}
+
+.ve-catalog-grid-icon {
+  color: #0879c4;
+}
+
+.ve-catalog-sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ve-catalog-sort label {
+  color: #718092;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.ve-catalog-sort select {
+  padding: 9px 12px;
+  background: #fff;
+  border: 1px solid #dce6ef;
+  border-radius: 5px;
+  color: #102f50;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ve-catalog-mobile-filter {
+  display: none;
+}
+
+/* ACTIVE FILTERS */
+
+.ve-catalog-active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 21px;
+}
+
+.ve-catalog-active-filters button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #d7e7f3;
+  border-radius: 5px;
+  background: #edf6fc;
+  color: #22638c;
+  padding: 7px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.ve-catalog-active-filters button:hover {
+  background: #dfeff9;
+}
+
+/* PRODUCT GRID */
+
+.ve-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 21px;
+}
+
+.ve-catalog-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #e2eaf2;
+  border-radius: 9px;
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease,
+    border-color .28s ease;
+  animation: veCatalogReveal .45s ease both;
+}
+
+.ve-catalog-card:hover {
+  transform: translateY(-5px);
+  border-color: #cee1ef;
+  box-shadow: 0 15px 35px rgba(16,47,80,.075);
+}
+
+.ve-catalog-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 245px;
+  padding: 22px;
+  background: #fff;
+  border-bottom: 1px solid #edf1f5;
+  overflow: hidden;
+}
+
+.ve-catalog-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform .45s ease;
+}
+
+.ve-catalog-card:hover .ve-catalog-card-image img {
+  transform: scale(1.065);
+}
+
+.ve-catalog-image-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  width: 100%;
+  height: 100%;
+  color: #91a2b2;
+  background: #f7f9fc;
+  text-align: center;
+  font-size: 12px;
+}
+
+.ve-catalog-image-empty svg {
+  font-size: 32px;
+  color: #b4c5d4;
+}
+
+.ve-catalog-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.ve-catalog-card-category {
+  margin-bottom: 10px;
+  color: #0879c4;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.ve-catalog-card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.ve-catalog-card h3 a {
+  color: #102f50;
+  text-decoration: none;
+}
+
+.ve-catalog-card h3 a:hover {
+  color: #0879c4;
+}
+
+.ve-catalog-card-desc {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  margin: 0 0 22px;
+  color: #718295;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.ve-catalog-card-footer {
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid #eef2f6;
+}
+
+.ve-catalog-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #0879c4;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ve-catalog-card-link:hover {
+  color: #102f50;
+}
+
+.ve-catalog-card-link svg {
+  font-size: 11px;
+  transition: transform .2s ease;
+}
+
+.ve-catalog-card-link:hover svg {
+  transform: translateX(4px);
+}
+
+/* EMPTY, ERROR AND LOADING */
+
+.ve-catalog-empty {
+  padding: 75px 24px;
+  border: 1px dashed #cfdee9;
+  border-radius: 9px;
+  background: #fff;
+  text-align: center;
+}
+
+.ve-catalog-empty > svg {
+  font-size: 38px;
+  color: #a2bacb;
+  margin-bottom: 20px;
+}
+
+.ve-catalog-empty h3 {
+  margin: 0 0 12px;
+  color: #102f50;
+  font-size: 22px;
+}
+
+.ve-catalog-empty p {
+  max-width: 420px;
+  margin: 0 auto 22px;
+  color: #79899a;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.ve-catalog-empty button {
+  background: #0879c4;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 22px;
+  cursor: pointer;
+}
+
+.ve-catalog-error {
+  padding: 17px 20px;
+  margin-bottom: 20px;
+  background: #fff3f3;
+  border: 1px solid #f4d1d1;
+  border-radius: 7px;
+  color: #aa2530;
+  font-size: 13px;
+}
+
+.ve-catalog-skeleton {
+  padding-bottom: 20px;
+  overflow: hidden;
+  border-radius: 9px;
+  border: 1px solid #e2eaf2;
+  background: #fff;
+}
+
+.ve-catalog-skeleton > div {
+  height: 230px;
+  margin-bottom: 23px;
+  background: #edf2f6;
+}
+
+.ve-catalog-skeleton > span {
+  display: block;
+  height: 13px;
+  margin: 12px 20px;
+  background: #edf2f6;
+  border-radius: 4px;
+}
+
+.ve-catalog-skeleton > span:nth-child(3) {
+  width: 70%;
+}
+
+.ve-catalog-skeleton > span:last-child {
+  width: 45%;
+}
+
+.ve-catalog-skeleton > div,
+.ve-catalog-skeleton > span {
+  animation: veCatalogPulse 1.5s ease-in-out infinite;
+}
+
+/* PAGINATION */
+
+.ve-catalog-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 35px;
+}
+
+.ve-catalog-pagination button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 41px;
+  height: 41px;
+  padding: 0 12px;
+  border: 1px solid #dfe7ef;
+  border-radius: 6px;
+  background: #fff;
+  color: #526a80;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease;
+}
+
+.ve-catalog-pagination button:hover:not(:disabled),
+.ve-catalog-pagination button.active {
+  background: #102f50;
+  color: #fff;
+  border-color: #102f50;
+}
+
+.ve-catalog-pagination button:disabled {
+  opacity: .35;
+  cursor: not-allowed;
+}
+
+.ve-catalog-page-gap {
+  color: #91a0ad;
+  padding: 0 4px;
+}
+
+/* ANIMATIONS */
+
+@keyframes veCatalogReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes veCatalogPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .5; }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1199px) {
+  .ve-catalog-layout {
+    grid-template-columns: 230px minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .ve-catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .ve-catalog-section {
+    padding: 55px 0 70px;
+  }
+
+  .ve-catalog-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ve-catalog-sidebar {
+    display: none;
+  }
+
+  .ve-catalog-sidebar.is-open {
+    display: block;
+  }
+
+  .ve-catalog-mobile-filter {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    color: #0879c4;
+    background: #edf6fc;
+    border: 1px solid #d4e7f4;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 600px) {
+  .ve-catalog-searchbar {
+    gap: 10px;
+    padding: 6px 6px 6px 13px;
+  }
+
+  .ve-catalog-searchbar button {
+    padding: 12px 11px;
+    font-size: 11px;
+  }
+
+  .ve-catalog-searchbar input {
+    font-size: 12px;
+  }
+
+  .ve-catalog-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ve-catalog-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ve-catalog-card-image {
+    height: 260px;
+  }
+
+  .ve-catalog-sort {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ve-catalog-card,
+  .ve-catalog-card-image img,
+  .ve-catalog-card-link svg {
+    animation: none;
+    transition: none;
+  }
+
+  .ve-catalog-skeleton > div,
+  .ve-catalog-skeleton > span {
+    animation: none;
+  }
+}

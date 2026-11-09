@@ -1,0 +1,104 @@
+
+.ve-public-layout {
+  min-height: 100vh;
+  background: #fff;
+}
+
+
+.ve-inner-hero {
+  position: relative;
+  padding: 75px 0;
+
+  background-color: #102f50;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(16, 47, 80, 0.90),
+      rgba(16, 47, 80, 0.65)
+    ),
+    url("../../public/assets/img/products-banner.jpg");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.ve-inner-hero-content {
+  animation: veFadeUp 0.6s ease both;
+}
+
+.ve-inner-hero-eyebrow {
+  display: block;
+  color: #a5d9ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.ve-inner-hero h1 {
+  color: #fff;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.ve-inner-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ve-inner-breadcrumb li {
+  color: #fff;
+  font-size: 13px;
+}
+
+.ve-inner-breadcrumb li:not(:first-child)::before {
+  content: "/";
+  margin-right: 10px;
+  opacity: 0.5;
+}
+
+.ve-inner-breadcrumb a {
+  color: #dceaf7;
+  text-decoration: none;
+}
+
+.ve-inner-breadcrumb a:hover {
+  color: #fff;
+}
+
+.ve-inner-main {
+  min-height: 400px;
+  background: #f6f8fb;
+}
+
+@keyframes veFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .ve-inner-hero {
+    padding: 50px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ve-inner-hero-content {
+    animation: none;
+  }
+}

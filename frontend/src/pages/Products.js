@@ -18,7 +18,7 @@ import {
 import NavbarOne from "../components/NavbarOne";
 import FooterOne from "../components/FooterOne";
 import SearchPopup from "../elements/SearchPopup";
-
+import LiveProductsCatalog from "../components/LiveProductsCatalog";
 import {
   products,
   productCategories,
@@ -478,7 +478,7 @@ const Products = () => {
           </div>
         </section>
 
-
+<LiveProductsCatalog />
 
       </main>
 

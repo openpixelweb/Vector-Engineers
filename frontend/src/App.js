@@ -1,10 +1,20 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomeOne from "./pages/HomeOne";
+import { useEffect } from "react";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 import ScrollToTop from "react-scroll-to-top";
+
+import RouteScrollToTop from "./elements/RouteScrollToTop";
+
+// Existing pages
+import HomeOne from "./pages/HomeOne";
 import HomeTwo from "./pages/HomeTwo";
+import HomeThree from "./pages/HomeThree";
+import HomeFour from "./pages/HomeFour";
+import HomeFive from "./pages/HomeFive";
+
 import About from "./pages/About";
 import Service from "./pages/Service";
 import ServiceDetails from "./pages/ServiceDetails";
@@ -13,10 +23,8 @@ import BlogDetails from "./pages/BlogDetails";
 import Pricing from "./pages/Pricing";
 import Faq from "./pages/Faq";
 import Contact from "./pages/Contact";
-import RouteScrollToTop from "./elements/RouteScrollToTop";
-import HomeThree from "./pages/HomeThree";
-import HomeFour from "./pages/HomeFour";
-import HomeFive from "./pages/HomeFive";
+
+// Vector Engineers pages
 import Brands from "./pages/Brands";
 import Industries from "./pages/Industries";
 import Clients from "./pages/Clients";
@@ -25,42 +33,79 @@ import Applications from "./pages/Applications";
 import Villas from "./pages/Villas";
 import HighRiseApartments from "./pages/HighRiseApartments";
 import Certificates from "./pages/Certificates";
+
+// Live Product and Model Details
+import {
+  LiveProductDetails,
+  LiveModelDetails,
+} from "./pages/LiveProductDetails";
+
 function App() {
   useEffect(() => {
     AOS.init({
       offset: 0,
       easing: "ease",
+      duration: 700,
       once: true,
     });
-    AOS.refresh();
   }, []);
+
   return (
     <BrowserRouter>
       <RouteScrollToTop />
+
       <Routes>
-        <Route exact path='/' element={<HomeOne />} />
-        <Route exact path='/home-2' element={<HomeTwo />} />
-        <Route exact path='/home-3' element={<HomeThree />} />
-        <Route exact path='/home-4' element={<HomeFour />} />
-        <Route exact path='/home-5' element={<HomeFive />} />
-        <Route exact path='/about' element={<About />} />
-        <Route exact path='/service' element={<Service />} />
-        <Route exact path='/service-details' element={<ServiceDetails />} />
-        <Route exact path='/blog' element={<Blog />} />
-        <Route exact path='/blog-details' element={<BlogDetails />} />
-        <Route exact path='/pricing' element={<Pricing />} />
-        <Route exact path='/faq' element={<Faq />} />
-        <Route exact path='/contact' element={<Contact />} />
+        {/* Home Pages */}
+        <Route path="/" element={<HomeOne />} />
+        <Route path="/home-2" element={<HomeTwo />} />
+        <Route path="/home-3" element={<HomeThree />} />
+        <Route path="/home-4" element={<HomeFour />} />
+        <Route path="/home-5" element={<HomeFive />} />
+
+        {/* Existing Pages */}
+        <Route path="/about" element={<About />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/service-details" element={<ServiceDetails />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog-details" element={<BlogDetails />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/contact" element={<Contact />} />
+
+        {/* Vector Engineers Pages */}
         <Route path="/brands" element={<Brands />} />
         <Route path="/industries" element={<Industries />} />
         <Route path="/clients" element={<Clients />} />
         <Route path="/products" element={<Products />} />
         <Route path="/applications" element={<Applications />} />
+
+        {/* Residential Solutions */}
         <Route path="/residential/villas" element={<Villas />} />
-        <Route path="/residential/high-rise-apartments" element={<HighRiseApartments />} />
+        <Route
+          path="/residential/high-rise-apartments"
+          element={<HighRiseApartments />}
+        />
+
+        {/* Certificates */}
         <Route path="/certificates" element={<Certificates />} />
+
+        {/* Product Details */}
+        <Route
+          path="/products/:id"
+          element={<LiveProductDetails />}
+        />
+
+        {/* Individual Product Model Details */}
+        <Route
+          path="/products/models/:id"
+          element={<LiveModelDetails />}
+        />
       </Routes>
-      <ScrollToTop smooth color='#FA4318' />
+
+      <ScrollToTop
+        smooth
+        color="#0879C4"
+      />
     </BrowserRouter>
   );
 }

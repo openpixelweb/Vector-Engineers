@@ -13,7 +13,7 @@ import {
 import NavbarOne from "../components/NavbarOne";
 import FooterOne from "../components/FooterOne";
 import SearchPopup from "../elements/SearchPopup";
-
+import IndustryApplicationProducts from "../components/IndustryApplicationProducts";
 
 /* ==========================================
    APPLICATION DATA
@@ -446,7 +446,7 @@ const Applications = () => {
           </div>
         </div>
       </section>
-
+<IndustryApplicationProducts type="application" />
       <FooterOne />
     </>
   );
