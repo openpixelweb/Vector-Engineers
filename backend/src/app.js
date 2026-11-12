@@ -67,32 +67,13 @@ app.use(
   })
 );
 
-// ============================================
-// PUBLIC MEDIA FILES
-// ============================================
 
-app.use(
-  "/media",
-  express.static(media.baseDirectory, {
-    index: false,
-    dotfiles: "deny",
-    maxAge: "1h",
+/* ==========================================
+   PERMANENT CLOUD MEDIA FILE DELIVERY
+========================================== */
 
-    setHeaders: (res, file) => {
-      res.setHeader(
-        "X-Content-Type-Options",
-        "nosniff"
-      );
+app.use("/media", media.publicRouter);
 
-      if (file.endsWith(".pdf")) {
-        res.setHeader(
-          "Content-Disposition",
-          "inline"
-        );
-      }
-    },
-  })
-);
 
 // ============================================
 // BACKEND HOME PAGE - NEW
