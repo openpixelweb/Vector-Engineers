@@ -1025,3 +1025,59 @@ textarea {
     transition: none;
   }
 }
+
+/* ==========================================
+   VECTOR ENGINEERS ADMIN IMPROVEMENTS
+========================================== */
+
+/* Delete Action */
+.actions .ve-delete-action {
+  color: #dc2626;
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.actions .ve-delete-action:hover {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #ffffff;
+}
+
+.actions .ve-delete-action:focus-visible {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+}
+
+/* Image Upload */
+.ve-simple-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 28px 20px;
+  background: #f7faff;
+  border: 1px dashed #aac2df;
+  border-radius: 14px;
+  text-align: center;
+  color: #002a68;
+}
+
+.ve-simple-upload strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ve-simple-upload small {
+  color: #64748b;
+}
+
+/* Delete and upload button consistency */
+.media-preview .secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
