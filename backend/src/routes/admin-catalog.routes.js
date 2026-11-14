@@ -360,16 +360,15 @@ router.post(
 
     /* CREATE RECORD */
 
-    const created = await Model.create(
-      data
-    );
 
-    return res.status(201).json({
-      success: true,
-      message:
-        `${item.Model.modelName} created successfully.`,
-      data: created
-    });
+const created = await Model.create(data);
+
+return res.status(201).json({
+  success: true,
+  message: `${Model.modelName} created successfully.`,
+  data: created
+});
+
   })
 );
 
